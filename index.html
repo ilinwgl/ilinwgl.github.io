@@ -162,87 +162,9 @@
       
         <h1 id="机器学习基础"><a href="#机器学习基础" class="headerlink" title="机器学习基础"></a>机器学习基础</h1><p>作者是一名土木工程的在读研究生，目前学习的专业方向为土木信息工程，学习内容会涉及一些人工智能的领域。写这一系列博客的目的是为了将自己学过的内容做一个总结，并且希望以后找工作的时候会有帮助。由于作者属于半路出家，所以对很多问题理解的并不透彻，如果文章中有任何的错误和纰漏，欢迎大家指正。</p>
 <p>作者使用的书籍是周志华的《机器学习》，所以博文的内容全部基于此书。  </p>
-<h2 id="基础介绍"><a href="#基础介绍" class="headerlink" title="基础介绍"></a>基础介绍</h2><h3 id="数据"><a href="#数据" class="headerlink" title="数据"></a><strong>数据</strong></h3><p>机器学习的目的是通过让计算机对已有数据进行分析学习，找出其中规律，再对我们期望的目的进行预测。因此其中最重要的就是数据以及相关的一些概念。</p>
-<ul>
-<li><strong>数据集（data set）</strong> – 数据的集合</li>
-<li><strong>示例（instance）/ 样本（sample）</strong>   – 数据集中的每一条单独的记录</li>
-<li><strong>属性（attribute）/ 特征（feature）</strong>  – 描述对象在某一方面的性质</li>
-<li><strong>属性值（attribute value）</strong> – 属性的取值</li>
-<li><strong>属性空间（attribute space）/ 样本空间（sample space）/ 输入空间</strong> – 属性张成的空间</li>
-</ul>
-<p>根据每一个示例的属性值都可以在属性空间中拥有自己的坐标位置，空间中的每一个点都对应一个坐标向量，因此我们也把每一个示例称为一个<strong>特征向量（feature vector）</strong>。</p>
-<h3 id="学习"><a href="#学习" class="headerlink" title="学习"></a><strong>学习</strong></h3><p>获得数据之后就可以让计算机从数据中学得我们希望的模型，这一过程称为<strong>学习（learning）/训练（training）</strong>。</p>
-<ul>
-<li><strong>训练数据（training data）</strong> – 训练过程中使用的数据</li>
-<li><strong>训练样本（training sample）/ 训练示例（training instance）</strong> – 训练数据中的每一个样本</li>
-<li><strong>训练集（training set）</strong> – 训练样本组成的集合</li>
-<li><strong>假设（hypothesis）</strong> – 学得模型所对应了关于数据的某种潜在关系</li>
-<li><strong>真相（ground-truth）</strong> – 假设中模型所对应的潜在关系</li>
-</ul>
-<p>学习的过程就是为了找出或逼近真相。</p>
-<h3 id="预测"><a href="#预测" class="headerlink" title="预测"></a><strong>预测</strong></h3><p>预测的前提是训练样本的“结果信息”。</p>
-<ul>
-<li><strong>标记（label）</strong> – 关于示例结果的信息。例如“（（色泽=青绿；根蒂=蜷缩；敲声=浊响），好瓜）”中的“好瓜”即为标记</li>
-<li><strong>样例（example）</strong> – 拥有标记信息的示例</li>
-<li><strong>标记空间（label space）/ 输出空间</strong> – 所有标记的集合</li>
-</ul>
-<ul>
-<li><strong>测试（testing）</strong> – 学得模型后，进行预测的过程</li>
-<li><strong>测试样本（testing sample）</strong> – 用于预测的样本</li>
-</ul>
-<h2 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a>机器学习分类</h2><h3 id="根据预测形式"><a href="#根据预测形式" class="headerlink" title="根据预测形式"></a><strong>根据预测形式</strong></h3><ul>
-<li>分类（classification） – 预测的是离散值<ul>
-<li>二分类（binary classification）<ul>
-<li>正类（positive class）</li>
-<li>反类（negative class）</li>
-</ul>
-</li>
-<li>多分类（multi-class classification）</li>
-</ul>
-</li>
-<li>回归（regression） – 预测的是连续值</li>
-<li>聚类（clustering） – 将训练集进行若干组对应于潜在概念的划分 这些潜在概念是事先不知道的<ul>
-<li>簇（cluster）</li>
-</ul>
-</li>
-</ul>
-<p>一般地，预测任务是希望通过对训练集{（$x_1$，$y_1$), ($x_2$，$y_2$), … , ($x_m$，$y_m$)}进行学习，建立一个从输入空间 $\chi$ 到输出空间 $\mathcal{Y}$的映射$\mathcal{f}$。</p>
-<ul>
-<li>二分类任务 – 通常令$\mathcal{Y}$={-1, +1}或{0, 1}</li>
-<li>多分类任务 – $|\mathcal{Y}|$&gt;2</li>
-<li>回归任务 – $\mathcal{Y}=R， \  R$为实数集 </li>
-</ul>
-<h3 id="根据是否拥有标记信息"><a href="#根据是否拥有标记信息" class="headerlink" title="根据是否拥有标记信息"></a><strong>根据是否拥有标记信息</strong></h3><ul>
-<li>监督学习（supervised learning）<ul>
-<li>分类</li>
-<li>回归</li>
-</ul>
-</li>
-<li>无监督学习（unsupervised learning）<ul>
-<li>聚类</li>
-</ul>
-</li>
-</ul>
-<h2 id="泛化（generalization）"><a href="#泛化（generalization）" class="headerlink" title="泛化（generalization）"></a>泛化（generalization）</h2><p>机器学习的目标是使学得的模型能很好的适用于“新样本”，这种模型适用于新样本的能力称为<strong>泛化能力</strong>。</p>
-<p>通常假设样本空间中所有的样本服从一个未知的“分布”（distribute）$\mathcal{D}$，我们获得的每个样本是独立地从这个分布上采样获得的，即“独立同分布”（independent and identically distributed）。一般而言，训练样本越多，我们得到关于$\mathcal{D}$的信息越多，这样就越有可能通过学习获得具有强泛化能力的模型。</p>
-<h2 id="假设空间"><a href="#假设空间" class="headerlink" title="假设空间"></a>假设空间</h2><ul>
-<li><strong>归纳（induction）</strong> – 从特殊到一般的<strong>泛化</strong>过程</li>
-<li><strong>演绎（deduction）</strong> – 从一般到特殊的<strong>特化</strong>过程</li>
-</ul>
-<p>我们可以把学习过程看作一个在所有假设组成的空间中进行搜索的过程，搜索目标是找到与训练集匹配的假设。</p>
-<p>首先我们需要确定假设，即确定一共有多少个属性，每一个属性的取值范围是多少。例如“（色泽=？）$\wedge$（根蒂=？）$\wedge$（敲响=？）”，根据这些属性的取值，我们可以确定一个类似于树结构的<strong>假设空间</strong>。在这个假设空间的最顶端是每一个属性，并且其取值为取值范围中的任何一个值（用“*”表示）。其下方的分支可以逐步的确定每一个属性的具体取值情况。</p>
-<p>根据假设空间的结构类型，一般的搜索方法有：</p>
-<ul>
-<li>自顶向下 – 一般到特殊</li>
-<li>自底向上 – 特殊到一般</li>
-</ul>
-<p>搜索过程中可以不断的排除与正例不一致的假设，或与反例一致的假设，最终得出我们想要的结果。</p>
-<h2 id="归纳偏好"><a href="#归纳偏好" class="headerlink" title="归纳偏好"></a>归纳偏好</h2><p>通过上述在假设空间中的搜索，我们可能得到多个与训练集一致的假设，这些假设的集合称为<strong>版本空间（version space）</strong>。而对应与我们的算法，只能产生一个模型，也就是说我们必须确定，我们想要的模型具体是版本空间中的那一个假设。这种机器学习在学习过程中对某种类型假设的偏好，称之为<strong>归纳偏好（inductive bias）</strong>。</p>
-<p>任何一个有效的机器学习算法必有其归纳偏好，才可以产出它认为“正确”的模型。</p>
-<h3 id="奥卡姆剃刀（Occam’s-razor）"><a href="#奥卡姆剃刀（Occam’s-razor）" class="headerlink" title="奥卡姆剃刀（Occam’s razor）"></a><strong>奥卡姆剃刀（Occam’s razor）</strong></h3><p>奥卡姆剃刀为一种基本的原则，用来帮助算法确立正确的偏好，即 <em>“若有多个假设与观察一致，则选最简单的那个”</em>。</p>
-<p>这里奥卡姆剃刀只是提供一种选择，并不代表其适用于任何情况。也就是说其并不是唯一可行原则。算法的偏好需要根据具体的问题来确定。</p>
-<h3 id="“没有免费的午餐”-定理（No-Free-Lunch-Theorem-NFL）"><a href="#“没有免费的午餐”-定理（No-Free-Lunch-Theorem-NFL）" class="headerlink" title="“没有免费的午餐” 定理（No Free Lunch Theorem - NFL）"></a><strong>“没有免费的午餐” 定理（No Free Lunch Theorem - NFL）</strong></h3><p>NFL定理证明了所有的问题出现的机会相同，即所有的问题等同重要。换句话说，如果不考虑具体的情况，那么所有的算法都是一样好的。然而在实际情况中，我们的算法模型是为了具体解决某一个问题而确定的，因此才可以去讨论哪一种算法模型更好。脱离具体问题讨论什么算法更好，都是毫无意义的。</p>
-
+        
+          <a class="article-more-a" href="/2020/06/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80_1--%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/#more">more >></a>
+        
       
 
       
