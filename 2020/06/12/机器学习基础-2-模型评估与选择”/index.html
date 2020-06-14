@@ -6,17 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>机器学习基础_2--模型评估与选择” | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="WGL的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="机器学习基础作者是一名土木工程的在读研究生，目前学习的专业方向为土木信息工程，学习内容会涉及一些人工智能的领域。写这一系列博客的目的是为了将自己学过的内容做一个总结，并且希望以后找工作的时候会有帮助。由于作者属于半路出家，所以对很多问题理解的并不透彻，如果文章中有任何的错误和纰漏，欢迎大家指正。 作者使用的书籍是周志华的《机器学习》，所以博文的内容全部基于此书。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习基础_2--模型评估与选择”">
+<meta property="og:url" content="http://yoursite.com/2020/06/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-2-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9%E2%80%9D/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="WGL的个人博客">
+<meta property="og:description" content="机器学习基础作者是一名土木工程的在读研究生，目前学习的专业方向为土木信息工程，学习内容会涉及一些人工智能的领域。写这一系列博客的目的是为了将自己学过的内容做一个总结，并且希望以后找工作的时候会有帮助。由于作者属于半路出家，所以对很多问题理解的并不透彻，如果文章中有任何的错误和纰漏，欢迎大家指正。 作者使用的书籍是周志华的《机器学习》，所以博文的内容全部基于此书。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/06/public/img/tp.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/public/img/P-R.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/public/img/ROC.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/public/img/cost-matrix.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/public/img/bin.png">
+<meta property="og:image" content="http://yoursite.com/2020/06/public/img/Mc.jpg">
+<meta property="article:published_time" content="2020-06-12T12:24:12.000Z">
+<meta property="article:modified_time" content="2020-06-14T03:59:52.755Z">
 <meta property="article:author" content="Guanlin Wang">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/06/public/img/tp.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -138,16 +147,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-机器学习基础-2-模型评估与选择”" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-机器学习基础-2-模型评估与选择”" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-2-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9%E2%80%9D/">机器学习基础_2--模型评估与选择”</a>
+    <h1 class="article-title" itemprop="name">
+      机器学习基础_2--模型评估与选择”
     </h1>
   
 
@@ -162,9 +169,192 @@
       
         <h1 id="机器学习基础"><a href="#机器学习基础" class="headerlink" title="机器学习基础"></a>机器学习基础</h1><p>作者是一名土木工程的在读研究生，目前学习的专业方向为土木信息工程，学习内容会涉及一些人工智能的领域。写这一系列博客的目的是为了将自己学过的内容做一个总结，并且希望以后找工作的时候会有帮助。由于作者属于半路出家，所以对很多问题理解的并不透彻，如果文章中有任何的错误和纰漏，欢迎大家指正。</p>
 <p>作者使用的书籍是周志华的《机器学习》，所以博文的内容全部基于此书。  </p>
-        
-          <a class="article-more-a" href="/2020/06/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-2-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9%E2%80%9D/#more">more >></a>
-        
+<a id="more"></a>
+
+<h2 id="提纲"><a href="#提纲" class="headerlink" title="提纲"></a><strong>提纲</strong></h2><p>通过前一章的学习，已经从数据中得到我们需要的模型。之后需要对我们生成的模型进行评估，以确定其优劣性。本章会涉及以下内容：</p>
+<ul>
+<li>经验误差与过拟合</li>
+<li>评估方法<ul>
+<li>留出法</li>
+<li>交叉验证法</li>
+<li>自助法</li>
+</ul>
+</li>
+<li>性能度量<ul>
+<li>错误率与精度</li>
+<li>查准率与查全率</li>
+<li>P-R曲线</li>
+<li>ROC与AUC曲线</li>
+<li>代价曲线</li>
+</ul>
+</li>
+<li>比较检验<ul>
+<li>假设检验</li>
+<li>交叉验证t检验</li>
+<li>McNemar检验</li>
+</ul>
+</li>
+<li>偏差与方差</li>
+</ul>
+<h2 id="经验误差与过拟合"><a href="#经验误差与过拟合" class="headerlink" title="经验误差与过拟合"></a><strong>经验误差与过拟合</strong></h2><ul>
+<li><strong>错误率（error rate）</strong> – 分类错误的样本数占总样本数的比例</li>
+<li><strong>精度（accuracy）</strong> – $精度=1-错误率$</li>
+<li><strong>误差（error）</strong> – 学习器的实际预测输出与样本的真实输出之间的差异</li>
+<li><strong>训练误差（training error）/ 经验误差（empirical error）</strong> – 学习器在训练集上的误差</li>
+<li><strong>泛化误差（generalization error）</strong> – 学习器在新样本上的误差</li>
+</ul>
+<p>我们最终希望得到一个泛化误差小的学习器。但是实际情况是我们并不知道新样本的真实输出是多少，所以我们希望可以努力通过降低经验误差，来提高学习器的性能。</p>
+<p>然而，如果学习器的学习能力过于强大，则会导致出现<strong>过拟合</strong>的情况：</p>
+<ul>
+<li><strong>过拟合（overfitting）</strong> – 学习器在学习过程中将训练集本身的一些特点当作了所有潜在样本都具备的一般性质。</li>
+<li><strong>欠拟合（underfitting）</strong> – 学习器未能很好的习得训练集中数据的特征。</li>
+</ul>
+<p>出现<strong>过拟合</strong>的原因是因为学习器的能力过于强大，以至于把训练集中样本所具备的不太一般的特征都学到了。这样会导致学习器的泛化能力下降，也就是说学习器只可以很完美的适合于训练集，而无法对新的样本做出适合的预测。</p>
+<p>相对的，出现<strong>欠拟合</strong>的原因是因为学习器的学习能力不足。欠拟合比较容易克服，而过拟合则无法彻底避免，我们只能做到缓解，或者说减小其风险。</p>
+<p>这里的学习能力，是由学习算法和数据内涵共同决定的。</p>
+<p>在现实任务中，我们往往有很多学习算法可供选择，甚至对同一个学习算法，当使用不同的参数配置时，也会产生不同的模型。<strong>所以对于模型的选择，理想的解决方案是对候选模型的泛化误差进行评估，选择泛化误差最小的那个模型。</strong></p>
+<h2 id="评估方法"><a href="#评估方法" class="headerlink" title="评估方法"></a><strong>评估方法</strong></h2><p>对模型进行评估时，我们需要使用测试集来测试学习器对新样本的判别能力，将测试集上的测试误差作为泛化误差的近似。测试集应尽量与训练集互斥，这样才能更准确的判断学习器的效果是否更好。</p>
+<h3 id="留出法（hold-out）"><a href="#留出法（hold-out）" class="headerlink" title="留出法（hold-out）"></a><strong><em>留出法（hold-out）</em></strong></h3><p>直接将数据集$\mathcal{D}$划分为两个互斥的集合，其中一个作为训练集$\mathcal{S}$，另一个作为测试集$\mathcal{T}$，即$\mathcal{D}=\mathcal{S}\cup\mathcal{T}, \ \mathcal{S}\cap\mathcal{T}=\varnothing$。</p>
+<p>需要注意的是，训练/测试集的划分要尽可能保持数据一致性，避免因数据划分过程引入额外的偏差而对最终结果产生影响，例如在分类任务中至少要保证样本的类别比例相似。保留类别的采样方式通常被称为“分层采样（stratified sampling）”。假设数据集中有$m_1$个正样本，$m_2$个负样本，而$\mathcal{S}$占$\mathcal{D}$的比例为$p$,则$\mathcal{T}$占$\mathcal{S}$的比例为$1-p$。</p>
+<ul>
+<li>$\mathcal{S}$中应含有$m_1<em>p$个正样本，$m_2</em>p$个负样本。</li>
+<li>$\mathcal{T}$中含有$m_1<em>(1-p)$个正样本，$m_2</em>(1-p)$个负样本。</li>
+</ul>
+<p>在使用留出法时，一般要采用若干次随机划分、重复进行试验评估后取平均值作为留出法的评估结果。同时可以得到估计结果的标准差。</p>
+<p>留出法划分比例：将2/3~4/5的样本用于训练，剩余样本用于测试。如果测试集小时，评估结果的方差较大；如果训练集小时，评估结果偏差较大。</p>
+<h3 id="交叉验证法"><a href="#交叉验证法" class="headerlink" title="交叉验证法"></a><strong><em>交叉验证法</em></strong></h3><p>交叉验证法（cross validation）先将数据集$\mathcal{D}$划分为$k$个大小相似的互斥子集，即$\mathcal{D}= \mathcal{D_1} \cup \mathcal{D_2} \cup … \cup \mathcal{D_k}, \mathcal{D_i} \cap \mathcal{D_j} = \varnothing (i \ne j)$。每个子集都尽可能保持数据分布一致性。然后每次用$k-1$个子集的并集作为训练集，剩下的那个子集作为测试集。这样就可以获得$k$组训练/测试集，从而可以进行$k$次训练和测试，最终返回这$k$个测试结果的均值。$k$值决定了交叉验证法的稳定性和保真性，一般$k$的取值为10。</p>
+<p>与留出法相似，数据集的划分方式有很多种，为减小因样本划分不同而引入的差别，$k$折交叉验证法通常要随即使用不同的划分$p$次，最终的评估结果是这$p$次$k$折交叉验证结果的均值。</p>
+<p>特例：<strong>留一法</strong>：假定$\mathcal{D}$中包含$m$个样本，若令$k=m$，则不受随机样本划分方式的影响，因为它只有唯一的一种划分方式。并且留一法中的训练集与原始数据集相比，只少了一个数据，所以其结果是最为准确的，但是当数据集中数据量很大时，留一法的计算开销会非常高。</p>
+<h3 id="自助法"><a href="#自助法" class="headerlink" title="自助法"></a><strong><em>自助法</em></strong></h3><p>留出法和交叉验证法中，由于保留了一部分样本用于测试，所以训练集会比数据集$\mathcal{D}$小，这必然会引入一些因训练样本规模不同而导致的估计偏差。</p>
+<p>给定包含$m$个样本的数据集$\mathcal{D}$，我们对它进行采样产生数据集$\mathcal{D’}$：每次随机从$\mathcal{D}$中挑选一个样本，将其拷贝到$\mathcal{D’}$，然后再将该样本放回初始数据集中，使得该样本在下次采样中仍有可能被选中。这个过程重复$m$次就得到了一个与原始数据集同样大小的数据集$\mathcal{D’}$。 – 自助采样</p>
+<p>显然数据集$\mathcal{D}$中会有一部分样本重复出现在新的数据集$\mathcal{D’}$中，而同时也会有一部分样本不会出现在$\mathcal{D’}$中。样本在$m$次采样中始终不被采到的概率为$(1-\frac{1}{m})^m$,取极限得为0,368。</p>
+<p>自助法在数据集较小，难以有效划分训练/测试集时很有用。自助法产生的数据集该表了初始数据集的分布，这回引入估计偏差。</p>
+<h2 id="性能度量"><a href="#性能度量" class="headerlink" title="性能度量"></a><strong>性能度量</strong></h2><p><strong>性能度量（performance measure）</strong> 即为衡量模型泛化能力的评价标准。性能度量反映了任务需求，在对比不同模型的能力时，使用不同的性能度量往往会产生不同的评判结果。</p>
+<p>在预测任务中，给定样例集$\mathcal{D}={(x_1,y_1), (x_2,y_2), … , (x_m,y_m)}$,其中$y_i$时示例$x_i$的真实标记。要评估学习器$f$的性能，就要把学习器预测结果$f(x)$与真实标记$y$进行比较。</p>
+<p><strong>回归任务</strong>最常用的性能度量是<strong>均方误差（mean squared error）</strong></p>
+<p>$E(f:D)=\frac{1}{m}\sum_{i=1}^m(f(x_i)-y_i)^2$</p>
+<p>我们主要讨论的是<strong>分类任务</strong>的常用的性能度量。</p>
+<h3 id="错误率与精度"><a href="#错误率与精度" class="headerlink" title="错误率与精度"></a><strong><em>错误率与精度</em></strong></h3><p>错误率与精度是分类任务中最常用的两种性能度量。既适用于二分类任务，也适用于多分类任务。</p>
+<ul>
+<li><strong>错误率</strong> 分类错误的样本数占样本总数的比例</li>
+<li><strong>精度</strong> 是分类正确的样本数占样本总数的比例</li>
+</ul>
+<h3 id="查准率与查全率"><a href="#查准率与查全率" class="headerlink" title="查准率与查全率"></a><strong><em>查准率与查全率</em></strong></h3><p>错误率和精度并不能满足所有的任务需求。例如瓜农拉来一车西瓜，错误率和精度只能反映有多少比例的瓜背判别错误。当我们希望知道“挑出的瓜中有多少好瓜”，或者“所有好瓜中有多少比例被挑出来了”。这时就需要引入查准率（准确率）和查全率（召回率）的概念。</p>
+<p>对于二分类问题，可将样例根据其真实类别与机器学习预测类别的组合划分为</p>
+<ul>
+<li>真正例（true positive）</li>
+<li>假正例（false positive）</li>
+<li>真反例（true negative）</li>
+<li>假反例（false negative）</li>
+</ul>
+<img src="../../public/img/tp.png" height="150">
+
+<ul>
+<li>查准率 $P=\frac{TP}{TP+FP}$  </li>
+<li>查全率 $R=\frac{TP}{TP+FN}$  </li>
+</ul>
+<p>查准率和查全率时一对矛盾的度量，一般来说，查准率高时，查全率往往偏低。反之亦然。</p>
+<h3 id="P-R曲线"><a href="#P-R曲线" class="headerlink" title="P-R曲线"></a><strong><em>P-R曲线</em></strong></h3><p>我们可以根据学习器的预测结果对样例进行排序，最靠前的为学习器认为最可能是正例的样本，最后面的是最不可能是正例的样本。按此顺序逐个把样本作为正例进行预测，则每次可以计算出当前的查全率、查准率。以查准率（P）为纵轴，查全率（R）为横轴作图，既可以得到“P-R曲线”。</p>
+<img src="../../public/img/P-R.png" height="300" />
+
+<p>通过P-R曲线来对学习器进行评估</p>
+<ol>
+<li>若一个学习器的P-R曲线被另一个学习器的曲线完全包住则可断言后者的性能优于前者；如果两个学习器的P-R曲线发生了相交，则无法判断孰优孰劣，只能在具体的P和R条件下进行比较</li>
+<li>学习器P-R曲线下的面积也可以作为性能比较的一个依据</li>
+<li><strong>平衡点（Break-Even Point BEP）</strong> – $P=R$时的情况，平衡点较高的学习器更优。</li>
+<li><strong>F1度量</strong> – F1是基于P和R的调和平均值 $\frac{1}{F1}=\frac12<em>(\frac1P+\frac1R)$ 即$F1=\frac{2</em>P<em>R}{P+R}=\frac{2</em>TP}{样例总数+TP-TN}$<br>F1越大性能越优。F1更重视较小值，当P和R中有一个较小值时，对F1的影响更大。</li>
+<li><strong>$F_\beta$度量</strong> – 基于P和R的加权调和平均 $\frac{1}{F_\beta}=\frac{1}{1+\beta^2}*(\frac{1}{P}+\frac{\beta^2}{R})$<br>当$\beta=1$时，即为F1度量。<br>当$\beta&gt;1$时，R有更大的影响。<br>当$\beta&lt;1$时，P有更大的影响。     </li>
+</ol>
+<h3 id="ROC与AUC"><a href="#ROC与AUC" class="headerlink" title="ROC与AUC"></a><strong><em>ROC与AUC</em></strong></h3><p>很多学习器是为测试样本产生一个实值或概率预测，然后将这个预测值与一个分类阈（threshold）值比较，如果大于阈值则为正类，否则为反类。因此这个实值或预测值即反映了学习器的泛化能力。我们可以将预测结果进行排序，最可能是正例的排在最前面，最不可能是正例的排在最后面。根据任务不同的需求，可以灵活的确定阈值的大小。比如：</p>
+<ul>
+<li>当我们更重视查准率（P）的时候，可以选取中间靠前位置的值作为阈值</li>
+<li>当我们更注重查全率（R）的时候，可以选取中间靠后位置的值作为阈值</li>
+</ul>
+<p>因此，排序本身的质量好坏，体现了综合考虑学习器在不同任务下的“期望泛化性能”的好坏。ROC曲线则是从这个角度出发来研究学习器泛化性能的有力工具。</p>
+<p><strong>ROC（Receiver Operating Characteristic）</strong> – 受试者工作特征。类似于P-R曲线。依旧首先对预测结果进行排序，按此顺序逐个把样本作为正例进行预测，每次计算出连个重要的值，作为曲线的纵轴和横轴。</p>
+<ul>
+<li>纵轴：TPR（真正例率） $TPR=\frac{TP}{TP+FN}$ – 真实情况为正例时预测正确的</li>
+<li>横轴：FPR（假正例率） $FPR=\frac{FP}{TN+FP}$ – 真实情况为反例时预测错误的</li>
+</ul>
+<img src="../../public/img/ROC.png">
+
+<p>现实任务中通常是利用有限个测试样例来绘制ROC曲线，所以一般不会得到（a）中那样平滑的曲线，一般为曲线的样式如（b）所示。</p>
+<p>通过ROC曲线来对学习器进行评估：（与P-R曲线类似）</p>
+<ol>
+<li>若一个学习器的ROC曲线被另一个学习器的曲线完全包住则可断言后者的性能优于前者；如果两个学习器的ROC曲线发生了相交，则无法判断孰优孰劣，只能在具体的P和R条件下进行比较</li>
+<li>学习器ROC曲线下的面积（即<strong>AUC</strong>）也可以作为性能比较的一个依据<br>$AUC=\frac{1}{2}<em>\sum_{i=1}^{m-1}(x_{i+1}-x_i)</em>(y_i+y_{i+1})$</li>
+</ol>
+<h3 id="代价曲线"><a href="#代价曲线" class="headerlink" title="代价曲线"></a><strong><em>代价曲线</em></strong></h3><p>我们之前讨论的情况是：当学习器进行错误预测和正确预测对结果造成的影响是一致的。然而在实际任务中，不同类型的错误往往会造成不同的后果。</p>
+<p>例如在医疗诊断中，将健康人与病人分类错误。将健康人误诊为病人需要增加后续的检查，而将病人误诊为健康人则可能错过最佳的治疗时间。由此可见，不同的错误最终会导致不同严重程度的后果。为权衡不同类型错误所造成的不同损失，可为错误赋予“非均等代价”（unequal cost）。</p>
+<p>以二分类任务为例，可根据任务的领域知识设定一个“代价矩阵”（cost matrix）</p>
+<img src="../../public/img/cost-matrix.png" height="200" />
+
+<p>$cost_{ij}$ 表示将第 $i$ 类样本预测为第 $j$ 类样本的代价。</p>
+<ul>
+<li>$cost_{ii}=0$</li>
+<li>若$cost_{01}&gt;cost_{10}$ 则将第0类判别为第1类所造成的损失更大，损失程度越大，$cost_{01}$与$cost_{10}$差别越大。</li>
+</ul>
+<p>在非均等代价下，我们所希望的不再是简单地最小化错误次数，而是希望最小化“总体代价”。</p>
+<p>若令$cost_{ij}$中的$i$、$j$取值不限于0、1，则可以定义出多分类任务地代价敏感性度量。</p>
+<h2 id="比较检验"><a href="#比较检验" class="headerlink" title="比较检验"></a><strong>比较检验</strong></h2><p>有了实验评估方法和性能度量，接下来我们来看一下比较检验。首先我们需要考虑一下几点因素：</p>
+<ul>
+<li>我们希望比较的是泛化性能，而通过实验评估方法我们获得的是测试集上的性能</li>
+<li>测试集上的性能与测试集本身地选择有很大关系，不仅使用不同大小地测试集会得到不同的结果，即使使用相同大小的测试集，若包含不同地测试样例，结果也不相同</li>
+<li>很多机器学习算法本身有一定的随机性，即便使用相同的参数设置在同一个测试集上多次运行，其结果也会不同</li>
+</ul>
+<p><strong>统计假设检验（hypothesis test）</strong> 为我们进行学习器性能比较提供了重要依据。</p>
+<h3 id="假设检验"><a href="#假设检验" class="headerlink" title="假设检验"></a><strong><em>假设检验</em></strong></h3><p>假设检验中的“假设”是对学习器泛化错误率分布的某种判断或猜想。现实任务中我们并不知道学习器的泛化错误率 $\epsilon$，只能获知其测试错误率 $\hat{\epsilon}$。虽然二者未必相同，但二者相近的可能性很大，因此我们可以通过测试错误率来推断其泛化错误率。</p>
+<ul>
+<li>泛化错误率为 $\epsilon$ 的学习器一个样本上犯错得概率是 $\epsilon$</li>
+<li>测试错误率为 $\hat{\epsilon}$ 意味着在 $m$ 个样本中恰有 $\hat{\epsilon}*m$ 个样本被误分类。</li>
+</ul>
+<p>学习器将 $m’$ 个样本误分类，其余全部正确分类得概率为:</p>
+<p>$P={m \choose m’}\epsilon^{m’}(1-\epsilon)^{m-m’}$</p>
+<p>由此可推出恰将 $\hat{\epsilon}*m$ 个样本误分类得概率为：</p>
+<p>$P={m \choose \hat{\epsilon}<em>m}\epsilon^{\hat{\epsilon}</em>m}(1-\epsilon)^{m-\hat{\epsilon}*m}$</p>
+<p>这符合二项分布（binomial） – <em>二项分布使用以描述 $N$ 次独立的伯努利实验中有 $m$ 次成功得概率，其中每次伯努利实验成功的概率为 $\mu \in [0, 1]$</em></p>
+<img src="../../public/img/bin.png">
+
+<p>如上图所示，若 $\epsilon=0.3$ 则10个样本中测得3个被误分类的概率最大。</p>
+<p><strong>t检验</strong></p>
+<p>在很多时候，我们并不是只做一次留出法估计，而是通过多次重复留出法或是交叉验证法等进行多次训练测试，这样就会得到多次测试错误率，此时可使用t检验（t-test）。</p>
+<p>假定我们获得 $k$ 个测试错误率，$\hat{\epsilon_1},\hat{\epsilon_2},…\hat{\epsilon_k}$，我们可求得其平均值与方差：</p>
+<p>$\mu = \frac{1}{k}\sum_{i=1}^k\hat{\epsilon_i}$</p>
+<p>$\sigma^2 = \frac{1}{k-1}\sum_{i=1}^k(\hat{\epsilon_i}-\mu)^2$</p>
+<p>这 $k$ 个测试错误率可以看作泛化错误率 $\epsilon_0$ 的独立采样，则变量</p>
+<p>$\tau_t = \frac{\sqrt{k}(\mu-\epsilon_0)}{\sigma}$</p>
+<p>服从自由度为 $k-1$ 的t分布。– <em>t分布用于根据小样本来估计呈正态分布且方差未知的总体的均值。如果总体方差已知，则应该用正态分布来估计总体均值。t分布曲线形态与自由度大小有关。自由度越小，曲线越平坦，自由度越大曲线越接近正态分布，当自由度为无穷大时，t分布即为正态分布。</em></p>
+<p>对于假设 $\mu = \epsilon_0$ 和显著度 $\alpha$ 我们可以计算出当前错误率均值为 $\epsilon_0$ 时，在 $1-\alpha$ 概率内能观测到的最大错误率，即临界值。若 $|\mu-\epsilon_0|$ 在临界范围内则可以接受该假设。</p>
+<h3 id="交叉验证t检验"><a href="#交叉验证t检验" class="headerlink" title="交叉验证t检验"></a><strong><em>交叉验证t检验</em></strong></h3><p>对两个学习器A和B，若我们使用k折交叉验证法分别得到他们的错误率。则可使用k折交叉验证成对t检验来进行比较检验。这里的基本思想为，若两个学习器的性能相同，则它们使用相同的训练测试集得到的测试错误率应相同 $\epsilon_i^A = \epsilon_i^B$。</p>
+<p>具体操作：</p>
+<ul>
+<li>先对每对结果求差 $\Delta_i = \epsilon_i^A - \epsilon_i^B$</li>
+<li>若两个学习器性能相同，则差值应该为0</li>
+<li>可根据差值 $\Delta_1,\Delta_2,…,\Delta_k$，对假设“学习器A和B的性能相同”做t检验。</li>
+<li>计算出差值 $\Delta_i$ 的均值 $\mu$ 和方差 $\sigma^2$，在显著度 $\alpha$ 下，若变量 $\tau_t = |\frac{\sqrt{k}*\mu}{\sigma}|$<ul>
+<li>小于临界值，则不能拒绝该假设，即两个学习器性能相同。</li>
+<li>大于临界值，则认为两个学习器性能不同，且平均错误率较小的那个性能更优。</li>
+</ul>
+</li>
+</ul>
+<p>但需要注意的是，进行假设检验的前提是：测试错误率均为泛化错误率的独立采样。通常情况下，由于样本数量有限，在使用交叉验证法的时候，不同轮次的训练集会有一定程度的重叠。我们一般的解决方法为“5X2交叉验证法”，即做5次2折交叉验证，在每次交叉验证之前随机将数据打乱，使得5次交叉验证的数据划分不重复。</p>
+<h3 id="McNemar检验"><a href="#McNemar检验" class="headerlink" title="McNemar检验"></a><strong><em>McNemar检验</em></strong></h3><p>对于二分类问题，使用留出法不仅可以估计出学习器A和B的测试错误率，还可获得两个学习器分类结果的查别。即两者都正确、都错误、一对一错。</p>
+<img src="../../public/img/Mc.jpg" height="200">
+
+<p>如果两个学习器性能相同，则应有 $e_{01}=e_{10}$。那么变量 $|e_{01}-e_{10}|$ 应当服从正态分布。</p>
+<p>McNemar检验考虑变量：</p>
+<p>$\tau_{\chi^2} = \frac{(|e_{01}-e_{10}|-1)^2}{e_{01}+e_{10}}$</p>
+<p>服从自由度为1的 $\chi^2$ 分布（卡方分布），即标准正态分布的平方。给定显著度 $\alpha$ 当以上变量小于临界值时，即不能拒绝假设。</p>
+<p>变量 $\tau_{\chi^2}$ 分子中有“-1”项，是因为 $|e_{01}+e_{10}|$ 通常很小，需要考虑连续性校正。</p>
+<h2 id="偏差与方差"><a href="#偏差与方差" class="headerlink" title="偏差与方差"></a><strong>偏差与方差</strong></h2><p>偏差-方差分解试图对学习算法的期望泛化错误率进行拆解。</p>
+<p>泛化误差可以分解为偏差、方差与噪声之和。</p>
+<ul>
+<li>偏差 – 度量了学习算法的期望预测与真实结果的偏离程度，即刻画了学习算法本身的拟合能力</li>
+<li>方差 – 度量了同样大小的训练集的变动所导致的学习性能的变化，即刻画了数据扰动所造成的影响</li>
+<li>噪声 – 表达了在当前任务上任何学习算法所能达到的期望泛化误差的下界，即刻画了学习问题本身的难度。</li>
+</ul>
+<p>偏差-方差分解说明，泛化性能是由学习算法的能力、数据的充分性以及学习任务本身的难度所共同决定的。</p>
+
       
 
       
@@ -175,16 +365,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-2-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9%E2%80%9D/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/06/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-2-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9%E2%80%9D/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80_1--%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">机器学习基础_1--基本术语</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -204,216 +453,14 @@
 
 
 
-
   
-    <article id="post-机器学习基础_1--基本术语" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80_1--%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/">机器学习基础_1--基本术语</a>
-    </h1>
   
 
-        
-        <a href="/2020/06/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80_1--%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/" class="archive-article-date">
-  	<time datetime="2020-06-12T08:27:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="机器学习基础"><a href="#机器学习基础" class="headerlink" title="机器学习基础"></a>机器学习基础</h1><p>作者是一名土木工程的在读研究生，目前学习的专业方向为土木信息工程，学习内容会涉及一些人工智能的领域。写这一系列博客的目的是为了将自己学过的内容做一个总结，并且希望以后找工作的时候会有帮助。由于作者属于半路出家，所以对很多问题理解的并不透彻，如果文章中有任何的错误和纰漏，欢迎大家指正。</p>
-<p>作者使用的书籍是周志华的《机器学习》，所以博文的内容全部基于此书。  </p>
-        
-          <a class="article-more-a" href="/2020/06/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80_1--%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/12/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80_1--%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Die-Erste" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/23/Die-Erste/">Die Erste</a>
-    </h1>
   
 
-        
-        <a href="/2020/05/23/Die-Erste/" class="archive-article-date">
-  	<time datetime="2020-05-23T21:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Der-erste-Abschnitt"><a href="#Der-erste-Abschnitt" class="headerlink" title="Der erste Abschnitt"></a>Der erste Abschnitt</h2><p>Der Inhalt</p>
-<hr>
-<h2 id="Der-zweite-Abschnitt"><a href="#Der-zweite-Abschnitt" class="headerlink" title="Der zweite Abschnitt"></a>Der zweite Abschnitt</h2><p>Der Inhalt</p>
-<hr>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a href="http://www.codesheep.com" target="_blank" rel="noopener">www.codesheep.com</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/23/Die-Erste/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/23/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2020/05/23/hello-world/" class="archive-article-date">
-  	<time datetime="2020-05-23T21:05:40.546Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/23/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -436,8 +483,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
