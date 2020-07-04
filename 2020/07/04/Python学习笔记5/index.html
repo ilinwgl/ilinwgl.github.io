@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Python学习笔记5 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="WGL的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Python学习笔记 - 字典与集合作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python学习笔记5">
+<meta property="og:url" content="http://yoursite.com/2020/07/04/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="WGL的个人博客">
+<meta property="og:description" content="Python学习笔记 - 字典与集合作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-07-04T08:08:07.000Z">
+<meta property="article:modified_time" content="2020-07-04T09:14:49.639Z">
 <meta property="article:author" content="ilinwgl">
 <meta name="twitter:card" content="summary">
   
@@ -138,16 +140,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Python学习笔记5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Python学习笔记5" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/07/04/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/">Python学习笔记5</a>
+    <h1 class="article-title" itemprop="name">
+      Python学习笔记5
     </h1>
   
 
@@ -161,9 +161,63 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="Python学习笔记-字典与集合"><a href="#Python学习笔记-字典与集合" class="headerlink" title="Python学习笔记 - 字典与集合"></a>Python学习笔记 - 字典与集合</h1><p>作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。</p>
-        
-          <a class="article-more-a" href="/2020/07/04/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/#more">more >></a>
-        
+<a id="more"></a>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="基本介绍"><a href="#基本介绍" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>字典也是一种容器，可以存放任意类型的对象。对象在字典中的储存是以键值对的形式存在的，例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;<span class="string">'Name'</span>: <span class="string">'Lin'</span>, <span class="string">'Age'</span>: <span class="string">'20'</span>&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="访问字典"><a href="#访问字典" class="headerlink" title="访问字典"></a>访问字典</h3><p>字典的访问与之前列表和元组不同，不再使用索引，而是需要使用其中的键，例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;<span class="string">'Name'</span>: <span class="string">'Lin'</span>, <span class="string">'Age'</span>: <span class="string">'20'</span>&#125;</span><br><span class="line">name = dict1[<span class="string">'Name'</span>]</span><br><span class="line"><span class="string">'''name = 'Lin' '''</span></span><br></pre></td></tr></table></figure>
+<h3 id="修改字典"><a href="#修改字典" class="headerlink" title="修改字典"></a>修改字典</h3><p>这里包括添加新的键值对，修改原有键值对的值，以及删除字典中的元素。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;<span class="string">'Name'</span>: <span class="string">'Lin'</span>, <span class="string">'Age'</span>: <span class="number">20</span>&#125;</span><br><span class="line"></span><br><span class="line">dict1[<span class="string">'University'</span>] = <span class="string">'TU Darmstadt'</span></span><br><span class="line"><span class="string">'''添加新的元素'''</span></span><br><span class="line"></span><br><span class="line">dict1[<span class="string">'Age'</span>] = <span class="number">21</span></span><br><span class="line"><span class="string">'''修改原有键值对的值'''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">del</span> dict1[<span class="string">'University'</span>]</span><br><span class="line"><span class="string">'''删除字典中的元素'''</span></span><br><span class="line">dict1.clear()</span><br><span class="line"><span class="string">'''清空字典'''</span></span><br><span class="line"><span class="keyword">del</span> dict1</span><br><span class="line"><span class="string">'''删除字典'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="健的特性"><a href="#健的特性" class="headerlink" title="健的特性"></a>健的特性</h3><p>字典中的值可以是任何对象，可以是标准对象，也可以是用户自己定义的对象，但是键却不可以是任意对象。对于键需要注意以下两点：</p>
+<ul>
+<li><p>不允许同一个键出现两次，如果同一个键被赋值多次次，之后保留最后一次的结果。</p>
+   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;<span class="string">'Name'</span>: <span class="string">'Lin'</span>, <span class="string">'Age'</span>: <span class="number">20</span>, <span class="string">'Age'</span>: <span class="number">21</span>&#125;</span><br><span class="line"><span class="string">'''这里字典中的Age的结果是21'''</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>键必须不可变，所以可以用数字，字符串或元组充当。</p>
+</li>
+</ul>
+<h3 id="内置函数和方法"><a href="#内置函数和方法" class="headerlink" title="内置函数和方法"></a>内置函数和方法</h3><p>内置函数：</p>
+<ul>
+<li>len(dict) — 计算字典中元素的个数</li>
+<li><p>str(dict) — 输出字典可以打印的字符串表示</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;<span class="string">'Name'</span>: <span class="string">'Lin'</span>, <span class="string">'Age'</span>: <span class="number">20</span>&#125;</span><br><span class="line">str(dict1)</span><br><span class="line"><span class="string">'''&#123;'Name': 'Lin', 'Age': 20&#125;'''</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>内置方法：</p>
+<ul>
+<li>dict.items() — 以列表的形式返回可遍历的（键、值）元素数组</li>
+<li>dict.keys() — 以列表的形式返回字典中的键</li>
+<li>dict.values() — 以列表的形式返回字典中的值</li>
+<li>pop(key[,default]) — 返回并删除给定键所对应的值，如果没有给key，则返回default值</li>
+<li>popitem() — 返回并删除字典中的最后一对键和值</li>
+</ul>
+<h2 id="集合（set）"><a href="#集合（set）" class="headerlink" title="集合（set）"></a>集合（set）</h2><h3 id="基本介绍-1"><a href="#基本介绍-1" class="headerlink" title="基本介绍"></a>基本介绍</h3><p>集合是一个无序的不重复元素序列，可以使用大括号{ }或者set()函数创建。</p>
+<p>注意：如果创建一个空的集合，则必须使用set()函数，因为大括号用于创建一个空的字典。</p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">1</span>&#125;</span><br><span class="line">print(set1)</span><br><span class="line"><span class="string">'''因为集合中不存在重复元素，所以结果为 &#123;1, 2, 3, 4&#125;'''</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#这里展示两个集合的运算</span></span><br><span class="line">set1 = set(<span class="string">'abrabrabrabr'</span>) <span class="comment"># set1=&#123;'a', 'b', 'r'&#125;</span></span><br><span class="line">set2 = set(<span class="string">'abcabc'</span>) <span class="comment"># set2=&#123;'a', 'b', 'c'&#125;</span></span><br><span class="line"></span><br><span class="line">set1 - set2 <span class="comment"># set1中存在而set2中不存在的元素</span></span><br><span class="line"><span class="string">'''&#123;'b'&#125;'''</span></span><br><span class="line">set1 | set2 <span class="comment"># set1和set2中包含的所有元素</span></span><br><span class="line"><span class="string">'''&#123;'a', 'b', 'r', 'c'&#125;'''</span></span><br><span class="line">set1 &amp; set2 <span class="comment"># set1和set2中都包含的元素</span></span><br><span class="line"><span class="string">'''&#123;'a', 'b'&#125;'''</span></span><br><span class="line">set1 ^ set2 <span class="comment"># 不同时出现在set1和set2中的元素</span></span><br><span class="line"><span class="string">'''&#123;'r', 'c'&#125;'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="集合的基本操作"><a href="#集合的基本操作" class="headerlink" title="集合的基本操作"></a>集合的基本操作</h3><h4 id="添加元素"><a href="#添加元素" class="headerlink" title="添加元素"></a>添加元素</h4><p>集合添加元素有两种方法：</p>
+<ul>
+<li>set.add(x)</li>
+<li>set.update(x)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">set1.add(<span class="number">5</span>)</span><br><span class="line"><span class="string">'''&#123;1, 2, 3, 4, 5&#125;'''</span></span><br><span class="line"></span><br><span class="line">set1.update(<span class="number">5</span>)</span><br><span class="line"><span class="string">'''&#123;1, 2, 3, 4, 5&#125;'''</span></span><br></pre></td></tr></table></figure>
+<h4 id="删除元素"><a href="#删除元素" class="headerlink" title="删除元素"></a>删除元素</h4><p>这里介绍三种方法：</p>
+<ul>
+<li>set.remove(x)</li>
+<li>set.discard(x)</li>
+<li>set.pop()</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">set1.remove(<span class="number">1</span>)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">&#123;2, 3, 4&#125;  </span></span><br><span class="line"><span class="string">这里需要注意的是，如果使用remove()方法要删除的元素在集合中不存在计算机会报错</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line">set1.discard(<span class="number">5</span>)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">&#123;1, 2, 3, 4&#125;</span></span><br><span class="line"><span class="string">与上面的remove()方法相比，这里并不会报错。</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line">set1.pop()</span><br><span class="line"><span class="string">'''pop()方法是随机删除集合中的一个元素'''</span></span><br></pre></td></tr></table></figure>
+<h4 id="计算集合元素个数"><a href="#计算集合元素个数" class="headerlink" title="计算集合元素个数"></a>计算集合元素个数</h4><ul>
+<li>len(set)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">len(set1)</span><br><span class="line"><span class="string">'''4'''</span></span><br></pre></td></tr></table></figure>
+<h4 id="清空集合"><a href="#清空集合" class="headerlink" title="清空集合"></a>清空集合</h4><ul>
+<li>set.clear()</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">set1.clear()</span><br><span class="line">print(set1)</span><br><span class="line"><span class="string">'''set1()'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="集合中需要注意的一些内容"><a href="#集合中需要注意的一些内容" class="headerlink" title="集合中需要注意的一些内容"></a>集合中需要注意的一些内容</h3><p>set.update({‘apple’})和set.update(‘apple’)是不同的，第一个是添加整个apple这个单词，而第二个是把apple拆成{‘a’, ‘p’, ‘p’, ‘l’, ‘e’}添加到集合中，并且会把重复的项删掉。</p>
+<p>set()函数中需要注意：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set1 = set((<span class="string">'apple'</span>,))</span><br><span class="line"><span class="string">'''这里表示set1是从元组转换来的，创建的集合是：&#123;'apple'&#125;'''</span></span><br><span class="line"></span><br><span class="line">set2 = set((<span class="string">'apple'</span>))</span><br><span class="line"><span class="string">'''这里set2并不是由一个元组转换来的，所以结果为：&#123;'a', 'p', 'l', 'e'&#125;'''</span></span><br></pre></td></tr></table></figure>
       
 
       
@@ -174,16 +228,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/07/04/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/07/04/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/06/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python学习笔记4</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -203,602 +316,14 @@
 
 
 
-
-  
-    <article id="post-Python学习笔记4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/">Python学习笔记4</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/" class="archive-article-date">
-  	<time datetime="2020-06-28T15:19:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Python学习笔记-列表与元组"><a href="#Python学习笔记-列表与元组" class="headerlink" title="Python学习笔记 - 列表与元组"></a>Python学习笔记 - 列表与元组</h1><p>作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。</p>
-        
-          <a class="article-more-a" href="/2020/06/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-算法与数据结构学习笔记1-算法及其复杂度" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/26/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E5%A4%8D%E6%9D%82%E5%BA%A6/">算法与数据结构学习笔记1-算法及其复杂度</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/26/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E5%A4%8D%E6%9D%82%E5%BA%A6/" class="archive-article-date">
-  	<time datetime="2020-06-26T11:59:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="算法与数据结构学习笔记"><a href="#算法与数据结构学习笔记" class="headerlink" title="算法与数据结构学习笔记"></a>算法与数据结构学习笔记</h1><p>因为作者并没有一个非常扎实的编程基础，所以作者希望通过这一系列的算法与数据结果的学习笔记的总结，学习更多的编程的相关知识。</p>
-        
-          <a class="article-more-a" href="/2020/06/26/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E5%A4%8D%E6%9D%82%E5%BA%A6/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/26/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E5%A4%8D%E6%9D%82%E5%BA%A6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Python学习笔记3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/">Python学习笔记3</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/" class="archive-article-date">
-  	<time datetime="2020-06-23T14:38:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Python学习笔记-字符串"><a href="#Python学习笔记-字符串" class="headerlink" title="Python学习笔记 - 字符串"></a>Python学习笔记 - 字符串</h1><p>作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。</p>
-        
-          <a class="article-more-a" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Python学习笔记2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/">Python学习笔记2</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/" class="archive-article-date">
-  	<time datetime="2020-06-23T09:27:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Python学习笔记-数字与运算符"><a href="#Python学习笔记-数字与运算符" class="headerlink" title="Python学习笔记 - 数字与运算符"></a>Python学习笔记 - 数字与运算符</h1><p>作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。</p>
-        
-          <a class="article-more-a" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Python学习笔记1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/">Python学习笔记1</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="archive-article-date">
-  	<time datetime="2020-06-23T09:02:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Python学习笔记-基础语法"><a href="#Python学习笔记-基础语法" class="headerlink" title="Python学习笔记 - 基础语法"></a>Python学习笔记 - 基础语法</h1><p>作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。</p>
-        
-          <a class="article-more-a" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-机器学习基础-3——线性模型" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-3%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/">机器学习基础-3——线性模型</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-3%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2020-06-18T13:52:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="机器学习基础"><a href="#机器学习基础" class="headerlink" title="机器学习基础"></a>机器学习基础</h1><p>作者是一名土木工程的在读研究生，目前学习的专业方向为土木信息工程，学习内容会涉及一些人工智能的领域。写这一系列博客的目的是为了将自己学过的内容做一个总结，并且希望以后找工作的时候会有帮助。由于作者属于半路出家，所以对很多问题理解的并不透彻，如果文章中有任何的错误和纰漏，欢迎大家指正。</p>
-<p>作者使用的书籍是周志华的《机器学习》，所以博文的内容全部基于此书。  </p>
-        
-          <a class="article-more-a" href="/2020/06/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-3%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-3%E2%80%94%E2%80%94%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-机器学习基础-2——模型评估与选择" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-2%E2%80%94%E2%80%94%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/">机器学习基础 2——模型评估与选择</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-2%E2%80%94%E2%80%94%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/" class="archive-article-date">
-  	<time datetime="2020-06-14T14:02:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="机器学习基础"><a href="#机器学习基础" class="headerlink" title="机器学习基础"></a>机器学习基础</h1><p>作者是一名土木工程的在读研究生，目前学习的专业方向为土木信息工程，学习内容会涉及一些人工智能的领域。写这一系列博客的目的是为了将自己学过的内容做一个总结，并且希望以后找工作的时候会有帮助。由于作者属于半路出家，所以对很多问题理解的并不透彻，如果文章中有任何的错误和纰漏，欢迎大家指正。</p>
-<p>作者使用的书籍是周志华的《机器学习》，所以博文的内容全部基于此书。  </p>
-        
-          <a class="article-more-a" href="/2020/06/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-2%E2%80%94%E2%80%94%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-2%E2%80%94%E2%80%94%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-机器学习基础-1——基本术语" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-1%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/">机器学习基础 1——基本术语</a>
-    </h1>
-  
-
-        
-        <a href="/2020/06/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-1%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/" class="archive-article-date">
-  	<time datetime="2020-06-10T14:01:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="机器学习基础"><a href="#机器学习基础" class="headerlink" title="机器学习基础"></a>机器学习基础</h1><p>作者是一名土木工程的在读研究生，目前学习的专业方向为土木信息工程，学习内容会涉及一些人工智能的领域。写这一系列博客的目的是为了将自己学过的内容做一个总结，并且希望以后找工作的时候会有帮助。由于作者属于半路出家，所以对很多问题理解的并不透彻，如果文章中有任何的错误和纰漏，欢迎大家指正。</p>
-<p>作者使用的书籍是周志华的《机器学习》，所以博文的内容全部基于此书。  </p>
-        
-          <a class="article-more-a" href="/2020/06/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-1%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-1%E2%80%94%E2%80%94%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Die-Erste" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/23/Die-Erste/">Die Erste</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/23/Die-Erste/" class="archive-article-date">
-  	<time datetime="2020-05-23T21:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-23</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Der-erste-Abschnitt"><a href="#Der-erste-Abschnitt" class="headerlink" title="Der erste Abschnitt"></a>Der erste Abschnitt</h2><p>Der Inhalt</p>
-<hr>
-<h2 id="Der-zweite-Abschnitt"><a href="#Der-zweite-Abschnitt" class="headerlink" title="Der zweite Abschnitt"></a>Der zweite Abschnitt</h2><p>Der Inhalt</p>
-<hr>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>www.codesheep.com</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/23/Die-Erste/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
+  
+
   
 
 
@@ -821,8 +346,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
