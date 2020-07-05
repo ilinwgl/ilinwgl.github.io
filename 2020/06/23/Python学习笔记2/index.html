@@ -16,7 +16,7 @@
 <meta property="og:description" content="Python学习笔记 - 数字与运算符作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-06-23T09:27:27.000Z">
-<meta property="article:modified_time" content="2020-06-23T13:55:28.827Z">
+<meta property="article:modified_time" content="2020-07-05T14:33:54.275Z">
 <meta property="article:author" content="ilinwgl">
 <meta name="twitter:card" content="summary">
   
@@ -215,16 +215,19 @@
 <li>seq是一个序列，如range（10）</li>
 </ul>
 </li>
-<li>random.randrange(start, stop, step)<ul>
+<li><p>random.randrange(start, stop, step)</p>
+<ul>
 <li>从指定范围内，按指定基数递增的集合获取一个随机数</li>
 <li>start - 指定范围内的开始值 包含在范围内 - 默认值为0</li>
 <li>stop - 指定范围内的结束值 不包含在范围内</li>
 <li>step - 指定递增基数 - 默认值为1</li>
-<li>例如：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">random.randrange(<span class="number">1</span>, <span class="number">100</span>, <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
-这里的含义就是从{1,3,5,7, … , 99}中选取一个随即数</li>
+<li><p>例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">random.randrange(<span class="number">1</span>, <span class="number">100</span>, <span class="number">2</span>)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">这里的含义就是从&#123;1,3,5,7, ... , 99&#125;中选取一个随即数</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 </li>
-<li>random.random()<ul>
+<li><p>random.random()</p>
+<ul>
 <li>生成一个随机数，范围是[0,1)</li>
 </ul>
 </li>
