@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Hexo</title>
+  <title>Python学习笔记9 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="WGL的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+  <meta name="description" content="Python学习笔记 - 输入和输出作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python学习笔记9">
+<meta property="og:url" content="http://yoursite.com/2020/08/14/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="WGL的个人博客">
+<meta property="og:description" content="Python学习笔记 - 输入和输出作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-08-14T13:34:17.000Z">
+<meta property="article:modified_time" content="2020-08-27T16:36:45.878Z">
 <meta property="article:author" content="ilinwgl">
 <meta name="twitter:card" content="summary">
   
@@ -138,295 +140,274 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Python学习笔记9" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Python学习笔记9
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/08/14/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09/" class="archive-article-date">
+
+        
+        <a href="/2020/08/14/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09/" class="archive-article-date">
   	<time datetime="2020-08-14T13:34:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/08/14/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09/">Python学习笔记9</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python学习笔记-输入和输出"><a href="#Python学习笔记-输入和输出" class="headerlink" title="Python学习笔记 - 输入和输出"></a>Python学习笔记 - 输入和输出</h1><p>作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。</p>
+<a id="more"></a>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><p>Python有两种输出方式：</p>
+<ul>
+<li>表达式语句</li>
+<li>print()函数</li>
+</ul>
+<h3 id="字符串输出"><a href="#字符串输出" class="headerlink" title="字符串输出"></a>字符串输出</h3><p>如果希望将输出转成字符串，可以使用repr()或str()函数来实现</p>
+<ul>
+<li>str()：函数返回一个用户易读的表达形式</li>
+<li>repr()：产生一个解释器易读的表达形式</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="string">'Hello World!'</span></span><br><span class="line"></span><br><span class="line">str(s)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Hello World!</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line">repr(s)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">'Hello World!'</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line">hello = <span class="string">'Hello World! \n'</span></span><br><span class="line">hellos = repr(hello)</span><br><span class="line">print(hellos)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">'Hello World! \n'</span></span><br><span class="line"><span class="string">这里repr()函数可以转义字符串中的特殊字符</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="str-format-方法"><a href="#str-format-方法" class="headerlink" title="str.format()方法"></a>str.format()方法</h3><p>括号中的内容会被format()中的参数替代:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'Name: &#123;&#125;, Age: &#123;&#125;'</span>.format(<span class="string">'Mike'</span>, <span class="string">'20'</span>))</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Name: Mike, Age: 20</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>括号中的数字用于指向传入对象在format()中的位置：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'&#123;0&#125; and &#123;1&#125;'</span>.format(<span class="string">'Google'</span>, <span class="string">'Apple'</span>))</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Google and Apple</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'&#123;1&#125; and &#123;0&#125;'</span>.format(<span class="string">'Google'</span>, <span class="string">'Apple'</span>))</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Apple and Google</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>括号中还可以使用关键字参数，来具体明确说明所指的参数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'&#123;Name&#125; is &#123;Age&#125; years old.'</span>.format(Name=<span class="string">'Mike'</span>, Age=<span class="string">'20'</span>))</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Mike is 20 years old.</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>可选项“:”</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line">print(<span class="string">'&#123;0:.3f&#125;'</span>.format(math.pi))</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">3.142</span></span><br><span class="line"><span class="string">.3f 在这里表示保留3位小数</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line">table = &#123;<span class="string">'Google'</span>: <span class="number">1</span>, <span class="string">'Apple'</span>: <span class="number">2</span>&#125;</span><br><span class="line"><span class="keyword">for</span> name, number <span class="keyword">in</span> table.items():</span><br><span class="line">    print(<span class="string">'&#123;0:10&#125; ==&gt; &#123;1:10d&#125;'</span>.format(name, number))</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Google          ==&gt;          1</span></span><br><span class="line"><span class="string">Apple          ==&gt;          2</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">冒号后面的10表示该区域的宽度</span></span><br><span class="line"><span class="string">第二个大括号中的d，表示十进制数</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="格式转换"><a href="#格式转换" class="headerlink" title="格式转换"></a>格式转换</h3><ul>
+<li>‘b’ - 二进制。将数字以2为基数进行输出。</li>
+<li>‘c’ - 字符。在打印之前将整数转换成对应的Unicode字符串。</li>
+<li>‘d’ - 十进制整数。将数字以10为基数进行输出。</li>
+<li>‘o’ - 八进制。将数字以8为基数进行输出。</li>
+<li>‘x’ - 十六进制。将数字以16为基数进行输出，9以上的位数用小写字母。</li>
+<li>‘e’ - 幂符号。用科学计数法打印数字。用’e’表示幂。</li>
+<li>‘g’ - 一般格式。将数值以fixed-point格式输出。当数值特别大的时候，用幂形式打印。</li>
+<li>‘n’ - 数字。当值为整数时和’d’相同，值为浮点数时和’g’相同。不同的是它会根据区域设置插入数字分隔符。</li>
+<li>‘%’ - 百分数。将数值乘以100然后以fixed-point(‘f’)格式打印，值后面会有一个百分号。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'&#123;0:b&#125;'</span>.format(<span class="number">3</span>)) <span class="comment"># 11</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'&#123;:c&#125;'</span>.format(<span class="number">20</span>)) <span class="comment"># </span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'&#123;:d&#125;'</span>.format(<span class="number">20</span>)) <span class="comment"># 20</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'&#123;:o&#125;'</span>.format(<span class="number">20</span>)) <span class="comment"># 24</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'&#123;:x&#125;'</span>.format(<span class="number">20</span>)) <span class="comment"># 14</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'&#123;:e&#125;'</span>.format(<span class="number">20</span>)) <span class="comment"># 2.000000e+01</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'&#123;:g&#125;'</span>.format(<span class="number">20.1</span>)) <span class="comment"># 20.1</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'&#123;:f&#125;'</span>.format(<span class="number">20</span>)) <span class="comment"># 20.000000</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'&#123;:n&#125;'</span>.format(<span class="number">20</span>)) <span class="comment"># 20</span></span><br><span class="line"></span><br><span class="line">print(<span class="string">'&#123;:%&#125;'</span>.format(<span class="number">20</span>)) <span class="comment"># 2000.000000%</span></span><br></pre></td></tr></table></figure>
+<h3 id="操作符"><a href="#操作符" class="headerlink" title="%操作符"></a>%操作符</h3><h4 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h4><ul>
+<li>%o —— oct 八进制</li>
+<li>%d —— dec 十进制</li>
+<li>%x —— hex 十六进制</li>
+</ul>
+<h4 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h4><ul>
+<li>%f ——保留小数点后面六位有效数字<ul>
+<li>%.3f，保留3位小数位</li>
+</ul>
+</li>
+<li>%e ——保留小数点后面六位有效数字，指数形式输出<ul>
+<li>%.3e，保留3位小数位，使用科学计数法</li>
+</ul>
+</li>
+<li>%g ——在保证六位有效数字的前提下，使用小数方式，否则使用科学计数法<ul>
+<li>%.3g，保留3位有效数字，使用小数或科学计数法</li>
+</ul>
+</li>
+</ul>
+<h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><ul>
+<li>%s</li>
+<li>%10s——右对齐，占位符10位</li>
+<li>%-10s——左对齐，占位符10位</li>
+<li>%.2s——截取2位字符串</li>
+<li>%10.2s——10位占位符，截取两位字符串</li>
+</ul>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><h3 id="读取键盘输入"><a href="#读取键盘输入" class="headerlink" title="读取键盘输入"></a>读取键盘输入</h3><p>Python中读取键盘输入采用input()方法</p>
+<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><p>读取文件一般使用open()函数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">open(filename, mode)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>filename：要访问文件名称的字符串值</li>
+<li>mode：打开文件的模式，默认方式为只读<ul>
+<li>只读 （r）<ul>
+<li>文件的指针将会放在文件的开头。</li>
+</ul>
+</li>
+<li>写入 （w）<ul>
+<li>打开一个文件用于写入。</li>
+<li>如果该文件已经存在则打开文件，并从头开始编辑，原有内容会被删除。</li>
+<li>如果该文件不存在，则创建新文件。</li>
+</ul>
+</li>
+<li>追加 （a）<ul>
+<li>打开一个文件用于追加。</li>
+<li>如果该文件已经存在则打开文件，指针会放在文件的结尾，新的内容会被写入到已有内容之后。</li>
+<li>如果该文件不存在，则创建新文件。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>常用的模式还有 r+ w+ a+，这些模式为读写模式，并且保持原本的特征。</p>
+<h3 id="写入文件"><a href="#写入文件" class="headerlink" title="写入文件"></a>写入文件</h3><p>f.write()方法用于写入文件内容：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">"/tmp/foo.txt"</span>, <span class="string">"w"</span>)</span><br><span class="line">f.write(<span class="string">"Python \n Java"</span>)</span><br><span class="line"></span><br><span class="line">f.close()</span><br></pre></td></tr></table></figure>
+<h3 id="读取文件"><a href="#读取文件" class="headerlink" title="读取文件"></a>读取文件</h3><p>f.read()方法可以读取一定数目的数据，然后作为字符串或字节对象返回。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">"/tmp/foo.txt"</span>, <span class="string">"r"</span>)</span><br><span class="line"></span><br><span class="line">str = f.read()</span><br><span class="line">print(str)</span><br><span class="line"></span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Python</span></span><br><span class="line"><span class="string">Java</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>f.readline()方法可以从文件中读取单独的一行。如果返回一个空字符串则说明已经读取到最后一行。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">f = open(<span class="string">"/tmp/foo.txt"</span>, <span class="string">"r"</span>)</span><br><span class="line"></span><br><span class="line">str = f.readline()</span><br><span class="line">print(str)</span><br><span class="line"></span><br><span class="line">f.close()</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Python</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>f.readlines()方法表示读取文件中的所有行。还可以使用迭代的方式读取文件中每一行的内容。</p>
+<h3 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h3><p>f.tell()返回文件对象当前所处的位置，它是从文件开头开始算起的字节数。</p>
+<p>f.seek()可以改变文件当前的位置：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">f.seek(offset, from_what)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">from_what的值：</span></span><br><span class="line"><span class="string">0表示开头位置，1表示当前位置，2表示结尾位置</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>f.close()方法表示关闭文件，释放系统资源。</p>
+<h2 id="pickle模块"><a href="#pickle模块" class="headerlink" title="pickle模块"></a>pickle模块</h2><p>Python中 的pickle模块实现了基本的数据序列化和反序列化。</p>
+<ul>
+<li>序列化方法可以将程序中运行的对象信息保存到文件中，永久储存。</li>
+<li>反序列化是序列化方法的逆方法，可以得到之前储存的对象。</li>
+</ul>
+<h3 id="常用函数"><a href="#常用函数" class="headerlink" title="常用函数"></a>常用函数</h3><p><strong>pickle.dump(obj, file, [,protocol])</strong></p>
+<ul>
+<li>将obj对象序列化存入已经打开的file中。</li>
+<li>参数：<ul>
+<li>obj：想要序列化的obj对象。</li>
+<li>file:文件名称。</li>
+<li>protocol：序列化使用的协议。如果该项省略，则默认为0。如果为负值或HIGHEST_PROTOCOL，则使用最高的协议版本。</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<p><strong>pickle.load(file)</strong></p>
+<ul>
+<li>将file中的对象序列化读出。</li>
+<li>参数：<ul>
+<li>file：文件名称。</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<p><strong>pickle.dumps(obj[, protocol])</strong></p>
+<ul>
+<li>将obj对象序列化为string形式，而不是存入文件中。</li>
+<li>参数：<ul>
+<li>obj：想要序列化的obj对象。</li>
+<li>protocal：如果该项省略，则默认为0。如果为负值或HIGHEST_PROTOCOL，则使用最高的协议版本。</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<p><strong>pickle.loads(string)</strong></p>
+<ul>
+<li>从string中读出序列化前的obj对象。</li>
+<li>参数：<ul>
+<li>string：文件名称。</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle  </span><br><span class="line"></span><br><span class="line">dataList = [[<span class="number">1</span>, <span class="number">1</span>, <span class="string">'yes'</span>],  </span><br><span class="line">            [<span class="number">1</span>, <span class="number">1</span>, <span class="string">'yes'</span>],  </span><br><span class="line">            [<span class="number">1</span>, <span class="number">0</span>, <span class="string">'no'</span>],  </span><br><span class="line">            [<span class="number">0</span>, <span class="number">1</span>, <span class="string">'no'</span>],  </span><br><span class="line">            [<span class="number">0</span>, <span class="number">1</span>, <span class="string">'no'</span>]]  </span><br><span class="line"></span><br><span class="line">dataDic = &#123; <span class="number">0</span>: [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>],  </span><br><span class="line">            <span class="number">1</span>: (<span class="string">'a'</span>, <span class="string">'b'</span>),  </span><br><span class="line">            <span class="number">2</span>: &#123;<span class="string">'c'</span>:<span class="string">'yes'</span>,<span class="string">'d'</span>:<span class="string">'no'</span>&#125;&#125;  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#使用dump()将数据序列化到文件中  </span></span><br><span class="line">fw = open(<span class="string">'dataFile.txt'</span>,<span class="string">'wb'</span>)  </span><br><span class="line"><span class="comment"># Pickle the list using the highest protocol available.</span></span><br><span class="line">pickle.dump(dataList, fw, <span class="number">-1</span>)</span><br><span class="line"><span class="comment"># Pickle dictionary using protocol 0.  </span></span><br><span class="line">pickle.dump(dataDic, fw)  </span><br><span class="line">fw.close()  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#使用load()将数据从文件中序列化读出  </span></span><br><span class="line">fr = open(<span class="string">'dataFile.txt'</span>,<span class="string">'rb'</span>)  </span><br><span class="line">data1 = pickle.load(fr)  </span><br><span class="line">print(data1)  </span><br><span class="line">data2 = pickle.load(fr)  </span><br><span class="line">print(data2)  </span><br><span class="line">fr.close()  </span><br><span class="line">  </span><br><span class="line"><span class="comment">#dumps()和loads() </span></span><br><span class="line">p = pickle.dumps(dataList)  </span><br><span class="line">print( pickle.loads(p) )  </span><br><span class="line">p = pickle.dumps(dataDic)  </span><br><span class="line">print( pickle.loads(p) )</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/14/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/22/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08/" class="archive-article-date">
-  	<time datetime="2020-07-22T07:48:49.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-22</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/07/22/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python学习笔记8</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/22/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B08/">Python学习笔记8</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/13/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07/" class="archive-article-date">
-  	<time datetime="2020-07-13T12:43:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/13/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B07/">Python学习笔记7</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-4-%E5%86%B3%E7%AD%96%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2020-07-05T14:37:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-4-%E5%86%B3%E7%AD%96%E6%A0%91/">机器学习基础 4 -- 决策树</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/05/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06/" class="archive-article-date">
-  	<time datetime="2020-07-05T12:57:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/05/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B06/">Python学习笔记6</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/07/04/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/" class="archive-article-date">
-  	<time datetime="2020-07-04T08:08:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-04</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/07/04/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B05/">Python学习笔记5</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/" class="archive-article-date">
-  	<time datetime="2020-06-28T15:19:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B04/">Python学习笔记4</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/26/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E5%A4%8D%E6%9D%82%E5%BA%A6/" class="archive-article-date">
-  	<time datetime="2020-06-26T11:59:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/26/%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01-%E7%AE%97%E6%B3%95%E5%8F%8A%E5%85%B6%E5%A4%8D%E6%9D%82%E5%BA%A6/">算法与数据结构学习笔记1-算法及其复杂度</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/" class="archive-article-date">
-  	<time datetime="2020-06-23T14:38:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B03/">Python学习笔记3</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/" class="archive-article-date">
-  	<time datetime="2020-06-23T09:27:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/">Python学习笔记2</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -450,8 +431,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
