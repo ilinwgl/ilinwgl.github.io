@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020 | Hexo</title>
+  <title>Python学习笔记10 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="WGL的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/page/2/index.html">
+  <meta name="description" content="Python学习笔记 - 错误和异常作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python学习笔记10">
+<meta property="og:url" content="http://yoursite.com/2020/08/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="WGL的个人博客">
+<meta property="og:description" content="Python学习笔记 - 错误和异常作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010/try.png">
+<meta property="og:image" content="http://yoursite.com/2020/08/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010/assert.png">
+<meta property="article:published_time" content="2020-08-28T08:42:44.000Z">
+<meta property="article:modified_time" content="2020-08-28T13:08:59.347Z">
 <meta property="article:author" content="ilinwgl">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/08/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010/try.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -138,214 +143,193 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Python学习笔记10" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python学习笔记10
+    </h1>
+  
+
+        
+        <a href="/2020/08/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010/" class="archive-article-date">
+  	<time datetime="2020-08-28T08:42:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-28</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Python学习笔记-错误和异常"><a href="#Python学习笔记-错误和异常" class="headerlink" title="Python学习笔记 - 错误和异常"></a>Python学习笔记 - 错误和异常</h1><p>作者是一名土木信息工程的研究生，平常接触C#比较多，为了学习机器学习相关内容，需要学习Python语言，所以整理一些简单的学习笔记。</p>
+<a id="more"></a>
+<h2 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h2><p>Python中的错误一般指语法错误。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> <span class="literal">True</span> print(<span class="string">'Hello world'</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">  File "&lt;stdin&gt;", line 1, in ?</span></span><br><span class="line"><span class="string">    while True print('Hello world')</span></span><br><span class="line"><span class="string">                   ^</span></span><br><span class="line"><span class="string">SyntaxError: invalid syntax</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>上面代码块中print()函数前面少了冒号所以会报出错误。语法分析器报错的时候会在最先找到错误的位置标记一个小小的箭头。</p>
+<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><p>在语法正确的情况下，计算机在运行代码时也会出现错误。这种在运行期间检测到的错误被称为异常。</p>
+<p>异常以不同的类型出现，这些类型都作为信息的一部分打印出来，例如：</p>
+<ul>
+<li>ZeroDivisionError</li>
+<li>NameError</li>
+<li>TypeError等</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> * (<span class="number">1</span>/<span class="number">0</span>)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "&lt;stdin&gt;", line 1, in ?</span></span><br><span class="line"><span class="string">ZeroDivisionError: division by zero</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="number">4</span> + spam*<span class="number">3</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "&lt;stdin&gt;", line 1, in ?</span></span><br><span class="line"><span class="string">NameError: name 'spam' is not defined</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="string">'2'</span> + <span class="number">2</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span></span><br><span class="line"><span class="string">TypeError: can only concatenate str (not "int") to str</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h3><p>try - except - else - finally 代码块。</p>
+<p><img src="/2020/08/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010/try.png"> </p>
+<p><strong>try语句：</strong></p>
+<ul>
+<li>运行方式：<ul>
+<li>首先，执行 try 子句（在关键字 try 和关键字 except 之间的语句）。</li>
+<li>如果没有异常发生，忽略 except 子句，try 子句执行后结束。</li>
+<li>如果在执行 try 子句的过程中发生了异常，那么 try 子句余下的部分将被忽略。如果异常的类型和 except 之后的名称相符，那么对应的 except 子句将被执行。</li>
+<li>如果一个异常没有与任何的 except 匹配，那么这个异常将会传递给上层的 try 中。</li>
+</ul>
+</li>
+<li>一个 try 语句可能包含多个 except 子句，分别来处理不同的特定的异常。最多只有一个分支会被执行。</li>
+</ul>
+<p><strong>except语句：</strong></p>
+<ul>
+<li>一个 except 子句可以同时处理多个异常，这些异常将被放在一个括号里成为一个元组。</li>
+<li>最后一个 except 子句可以忽略异常的名称，它将被当作通配符使用。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    f = open(<span class="string">'myfile.txt'</span>)</span><br><span class="line">    s = f.readline()</span><br><span class="line">    i = int(s.strip())</span><br><span class="line"><span class="keyword">except</span> OSError <span class="keyword">as</span> err:</span><br><span class="line">    print(<span class="string">"OS error: &#123;0&#125;"</span>.format(err))</span><br><span class="line"><span class="keyword">except</span> ValueError:</span><br><span class="line">    print(<span class="string">"Could not convert data to an integer."</span>)</span><br><span class="line"><span class="keyword">except</span>:</span><br><span class="line">    print(<span class="string">"Unexpected error:"</span>, sys.exc_info()[<span class="number">0</span>])</span><br><span class="line">    <span class="keyword">raise</span></span><br></pre></td></tr></table></figure>
+<p><strong>else语句：</strong></p>
+<ul>
+<li>写代码块时，else 语句必须放在 except 语句后面。</li>
+<li>else 子句将在 try 子句没有发生任何异常的时候执行。</li>
+<li>使用 else 子句比把所有的语句都放在 try 子句里面要好，这样可以避免一些意想不到，而 except 又无法捕获的异常。</li>
+</ul>
+<p><strong>finally语句：</strong></p>
+<ul>
+<li>finally 语句无论是否发生异常都将执行最后的代码。</li>
+</ul>
+<h3 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h3><p>Python使用raise语句抛出异常：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">raise</span> [Exception [, args [, traceback]]]</span><br></pre></td></tr></table></figure>
+<p>raise 唯一的一个参数指定了要被抛出的异常。它必须是一个异常的实例或者是异常的类（也就是 Exception 的子类）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">x = <span class="number">10</span></span><br><span class="line"><span class="keyword">if</span> x &gt; <span class="number">5</span>:</span><br><span class="line">    <span class="keyword">raise</span> Exception(<span class="string">'x 不能大于 5。x 的值为: &#123;&#125;'</span>.format(x))</span><br></pre></td></tr></table></figure>
+<p>如果只想知道这是否抛出了一个异常，并不想去处理它，那么一个简单的 raise 语句就可以再次把它抛出。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="keyword">raise</span> NameError(<span class="string">'HiThere'</span>)</span><br><span class="line"><span class="keyword">except</span> NameError:</span><br><span class="line">    print(<span class="string">'An exception flew by!'</span>)</span><br><span class="line">    <span class="keyword">raise</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">An exception flew by!</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "&lt;stdin&gt;", line 2, in ?</span></span><br><span class="line"><span class="string">NameError: HiThere</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="用户自定义异常"><a href="#用户自定义异常" class="headerlink" title="用户自定义异常"></a>用户自定义异常</h3><p>我们在写代码的时候可以通过创建一个新的异常类来拥有自己的异常。异常类继承自 Exception 类，可以直接继承，或者间接继承。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyError</span><span class="params">(Exception)</span>:</span></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, value)</span>:</span></span><br><span class="line">    self.value = value</span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> repr(self.value)</span><br><span class="line"></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">  <span class="keyword">raise</span> MyError(<span class="number">2</span>*<span class="number">2</span>)</span><br><span class="line"><span class="keyword">except</span> MyError <span class="keyword">as</span> e:</span><br><span class="line">  print(<span class="string">'My exception occurred, value:'</span>, e.value)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">My exception occurred, value: 4</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">raise</span> MyError(<span class="string">'oops!'</span>)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "&lt;stdin&gt;", line 1, in ?</span></span><br><span class="line"><span class="string">__main__.MyError: 'oops!'</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<h3 id="定义清理行为"><a href="#定义清理行为" class="headerlink" title="定义清理行为"></a>定义清理行为</h3><p>try 语句还有另外一个可选的子句，它定义了无论在任何情况下都会执行的清理行为。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">  <span class="keyword">raise</span> KeyboardInterrupt</span><br><span class="line"><span class="keyword">finally</span>:</span><br><span class="line">  print(<span class="string">'Goodbye, world!'</span>)</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Goodbye, world!</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "&lt;stdin&gt;", line 2, in &lt;module&gt;</span></span><br><span class="line"><span class="string">KeyboardInterrupt</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+<p>上例中不管 try 子句里面有没有发生异常，finally 子句都会执行。</p>
+<p>如果一个异常在 try 子句里（或者在 except 和 else 子句里）被抛出，而又没有任何的 except 把它截住，那么这个异常会在 finally 子句执行后被抛出。</p>
+<h2 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h2><p><img src="/2020/08/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010/assert.png"> </p>
+<p>Python assert（断言）用于判断一个表达式，在表达式条件为 false 的时候触发异常。</p>
+<p>断言可以在条件不满足程序运行的情况下直接返回错误，而不必等待程序运行后出现崩溃的情况。基本语法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">assert</span> expression</span><br><span class="line"></span><br><span class="line"><span class="string">'''等价于'''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> expression:</span><br><span class="line">  <span class="keyword">raise</span> AssertionError</span><br></pre></td></tr></table></figure>
+<p>例子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">assert</span> <span class="number">1</span>==<span class="number">1</span>    <span class="comment"># 条件为 true 正常执行</span></span><br><span class="line"><span class="keyword">assert</span> <span class="number">1</span>==<span class="number">2</span>    <span class="comment"># 条件为 false 触发异常</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span></span><br><span class="line"><span class="string">AssertionError</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">assert</span> <span class="number">1</span>==<span class="number">2</span>, <span class="string">'1 不等于 2'</span></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">Traceback (most recent call last):</span></span><br><span class="line"><span class="string">  File "&lt;stdin&gt;", line 1, in &lt;module&gt;</span></span><br><span class="line"><span class="string">AssertionError: 1 不等于 2</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/" class="archive-article-date">
-  	<time datetime="2020-06-23T09:27:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B02/">Python学习笔记2</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/28/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B010/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/" class="archive-article-date">
-  	<time datetime="2020-06-23T09:02:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-23</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/14/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B09/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python学习笔记9</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/23/Python%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B01/">Python学习笔记1</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-3-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/" class="archive-article-date">
-  	<time datetime="2020-06-18T13:52:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-18</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-3-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/">机器学习基础 3 -- 线性模型</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-2-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/" class="archive-article-date">
-  	<time datetime="2020-06-14T14:02:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-14</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-2-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/">机器学习基础 2 -- 模型评估与选择</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/06/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-1-%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/" class="archive-article-date">
-  	<time datetime="2020-06-10T14:01:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/06/10/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80-1-%E5%9F%BA%E6%9C%AC%E6%9C%AF%E8%AF%AD/">机器学习基础 1 -- 基本术语</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/23/Die-Erste/" class="archive-article-date">
-  	<time datetime="2020-05-23T21:08:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/23/Die-Erste/">Die Erste</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/23/hello-world/" class="archive-article-date">
-  	<time datetime="2020-05-23T21:05:40.546Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-23</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/23/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2020/">&amp;laquo; Prev</a><a class="page-number" href="/archives/2020/">1</a><span class="page-number current">2</span>
-    </nav>
   
 
 
@@ -369,8 +353,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
