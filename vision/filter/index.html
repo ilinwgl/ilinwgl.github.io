@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+        <title>Filter - Develop Notes</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+        
+        
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="../../assets/css/darcula-highlight.min.css">
+
+        <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="../../assets/css/dracula-ui.min.css">
+        <link rel="stylesheet" href="../../assets/css/mkdocs.min.css">
+
+        
+            <link  rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico">
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+                <script>hljs.initHighlightingOnLoad();</script>
+
+</head>
+
+<body class="drac-bg-black-secondary drac-text-grey-ternary drac-text drac-scrollbar-purple">
+
+    <main class="d-flex">
+
+        <!-- block sidebar -->
+            <nav id="sidebar" class="sidebar drac-bg-black">
+    <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Menu</span>
+        </button>
+    </div>
+
+    <div class="p-4">
+        
+
+        <div class="drac-text-center">
+            
+                <span class="drac-text drac-line-height drac-text-white">Develop Notes</span>
+            
+        </div>
+
+        <div class="drac-box flex-column">
+            <ul class="dot-ul">
+                <li><div class="dot-li drac-bg-cyan"></div></li>
+                <li><div class="dot-li drac-bg-green"></div></li>
+                <li><div class="dot-li drac-bg-orange"></div></li>
+                <li><div class="dot-li drac-bg-pink"></div></li>
+                <li><div class="dot-li drac-bg-purple"></div></li>
+                <li><div class="dot-li drac-bg-red"></div></li>
+                <li><div class="dot-li drac-bg-yellow"></div></li>
+            </ul>
+        </div>
+
+        <hr class="drac-divider" />
+
+        <!-- block menu -->
+        <ul class="mb-5 drac-list drac-list-none">
+            
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+                    Home
+                </a>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#computer-vision-collapse" aria-expanded="false">
+                    Computer Vision
+                </a>
+                <div class="collapse" id="computer-vision-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="drac-box">
+                <a href="../.."
+                    class="
+                    drac-anchor btn-toggle d-inline-flex align-items-center border-0 drac-text-purple--hover collapsed"
+                    data-bs-toggle="collapse" data-bs-target="#.net-development-collapse" aria-expanded="false">
+                    .NET Development
+                </a>
+                <div class="collapse" id=".net-development-collapse">
+                    <ul class="mb-5 drac-list drac-list-none">
+                            
+    <li class="drac-box-ternary">
+        <a href="../../dotnet/"
+            class="
+            drac-anchor d-inline-flex align-items-center border-0 drac-text-purple--hover">
+            Overview
+        </a>
+    </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <!-- endblock -->
+    </div>
+</nav>
+        <!-- endblock -->
+
+        <nav class="divider drac-bg-purple-cyan"></nav>
+
+        <div class="content">
+            <!-- block header -->
+                <header>
+    <nav class="navbar navbar-expand-xl drac-bg-purple">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler w-100 text-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsMenu"
+                aria-controls="navbarsMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse flex-column ml-auto" id="navbarsMenu">
+                <ul class="navbar-nav text-md-center">
+
+                    <!-- block preview -->
+                    <li class="nav-item">
+                            
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block search -->
+                    <li class="nav-item"><div role="search" class="search-box">
+	<form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+		<input type="text" name="q" class="drac-input drac-input-search drac-input-white drac-text-white drac-bg-black-secondary"
+		placeholder="Search docs" title="Type search term here" />
+	</form>
+</div>
+                    </li>
+                    <!--  endblock -->
+
+                    <!-- block source -->
+                    <li class="nav-item">
+                        
+                    </li>
+                    <!--  endblock -->
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+</header>
+            <!-- endblock -->
+
+            <!-- block content -->
+                <section class="p-md-5 section-content">
+    <article>
+        <p><h1 id="filter">Filter</h1>
+<p>滤波器（Filter）是一个<strong>权重矩阵（Kernel）</strong>，卷积（Convolution）是利用滤波器对图像进行运算的方法。</p>
+<ul>
+<li>Filter = Kernel</li>
+<li>Convolution = 运算过程 → 将权重（Filter）与图片像素进行相乘叠加得到对应的值</li>
+</ul>
+<p>滤波器通过卷积运算对图像进行<strong>增强、平滑、去噪、边缘检测</strong>和<strong>特征提取</strong>。</p>
+<h2 id="filter_1">Filter 特性</h2>
+<h3 id="_1">线性</h3>
+<p>$$
+filter(af_1 + bf_2) = afilter(f_1) + bfilter(f_2)
+$$</p>
+<h3 id="_2">平移不变性</h3>
+<p>$$
+filter(shift(f_1)) = shift(filter(f_1))
+$$</p>
+<h2 id="_3">边界情况</h2>
+<p>卷积后图像尺寸通常会减小，因此常通过 Padding（填充）扩展边界，使输入输出尺寸保持一致。</p>
+<p>这样做的的目的是：<strong>固定输入输出的尺寸</strong></p>
+<p>假设原图是一个 3x3 图像：</p>
+<pre><code>1 2 3
+4 5 6
+7 8 9
+</code></pre>
+<h3 id="zero-padding">Zero Padding</h3>
+<p>用0进行填充 → CNN常用</p>
+<pre><code>0 0 0 0 0
+0 1 2 3 0
+0 4 5 6 0
+0 7 8 9 0
+0 0 0 0 0
+</code></pre>
+<h3 id="replicate">Replicate</h3>
+<p>把最外面一圈像素向外延伸</p>
+<pre><code>1 1 2 3 3
+1 1 2 3 3
+4 4 5 6 6
+7 7 8 9 9
+7 7 8 9 9
+</code></pre>
+<h3 id="reflect">Reflect</h3>
+<p>把图像沿边界反射 → OpenCV 默认最常用</p>
+<pre><code>5 4 5 6 5
+2 1 2 3 2
+5 4 5 6 5
+8 7 8 9 8
+5 4 5 6 5
+</code></pre>
+<h3 id="circular">Circular</h3>
+<p>把图像看成首尾相连，左边接右边，上边接下边。→ FFT 常用</p>
+<pre><code>9 7 8 9 7
+3 1 2 3 1
+6 4 5 6 4
+9 7 8 9 7
+3 1 2 3 1
+</code></pre>
+<h2 id="_4">常见的滤波核</h2>
+<h3 id="_5">原图</h3>
+<table border="1">
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>1</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+</table>
+
+<h3 id="_6">左移</h3>
+<table border="1">
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+</table>
+
+<h3 id="_7">右移</h3>
+<table border="1">
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>0</td>
+        <td>0</td>
+    </tr>
+</table>
+
+<h3 id="_8">均值</h3>
+<table border="1">
+    <tr>
+        <td>1/9</td>
+        <td>1/9</td>
+        <td>1/9</td>
+    </tr>
+    <tr>
+        <td>1/9</td>
+        <td>1/9</td>
+        <td>1/9</td>
+    </tr>
+    <tr>
+        <td>1/9</td>
+        <td>1/9</td>
+        <td>1/9</td>
+    </tr>
+</table>
+
+<h3 id="_9">锐化</h3>
+<h4 id="a">锐化A</h4>
+<table border="1">
+    <tr>
+        <td>-1/9</td>
+        <td>-1/9</td>
+        <td>-1/9</td>
+    </tr>
+    <tr>
+        <td>-1/9</td>
+        <td>17/9</td>
+        <td>-1/9</td>
+    </tr>
+    <tr>
+        <td>-1/9</td>
+        <td>-1/9</td>
+        <td>-1/9</td>
+    </tr>
+</table>
+
+<ul>
+<li>利用上下左右和四个对角一共8个方向</li>
+<li>锐化更加均匀</li>
+<li>各方向响应一致</li>
+<li>更接近真实高频</li>
+<li><strong>对噪声更敏感！！！</strong></li>
+</ul>
+<h4 id="b">锐化B</h4>
+<table border="1">
+    <tr>
+        <td>0</td>
+        <td>-1</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>-1</td>
+        <td>5</td>
+        <td>-1</td>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>-1</td>
+        <td>0</td>
+    </tr>
+</table>
+
+<ul>
+<li>利用上下左右四个方向 → 相当于 原图 + Laplacian</li>
+<li>边缘增强较温和</li>
+<li>不容易放大噪声</li>
+<li>计算简单</li>
+<li>OpenCV中常用</li>
+</ul>
+<h4 id="c">锐化C</h4>
+<table border="1">
+    <tr>
+        <td>-1</td>
+        <td>-1</td>
+        <td>-1</td>
+    </tr>
+    <tr>
+        <td>-1</td>
+        <td>9</td>
+        <td>-1</td>
+    </tr>
+    <tr>
+        <td>-1</td>
+        <td>-1</td>
+        <td>-1</td>
+    </tr>
+</table>
+
+<ul>
+<li>锐化非常强</li>
+<li>边缘很明显</li>
+<li>容易产生振铃（Halo）</li>
+<li>噪声也会被放大</li>
+</ul>
+<h4 id="_10">总结</h4>
+<table border="1">
+    <tr>
+        <th>核</th>
+        <th>利用邻域</th>
+        <th>锐化效果</th>
+        <th>噪声放大</th>
+        <th>特点</th>
+    </tr>
+    <tr>
+        <td>锐化A</td>
+        <td>四邻域</td>
+        <td>中等</td>
+        <td>较小</td>
+        <td>最常用</td>
+    </tr>
+    <tr>
+        <td>锐化B</td>
+        <td>八邻域</td>
+        <td>平滑自然</td>
+        <td>中等</td>
+        <td>Unsharp Mask</td>
+    </tr>
+    <tr>
+        <td>锐化C</td>
+        <td>八邻域</td>
+        <td>很强</td>
+        <td>较大</td>
+        <td>容易过锐</td>
+    </tr>
+</table>
+
+<h2 id="_11">高斯滤波器</h2>
+<p>滤波核中心的权重大，边缘的权重小。</p>
+<p>对高斯核进行归一化，可以避免衰减图像。</p>
+<p>标准差的影响：</p>
+<ul>
+<li>$\sigma$越小，中心比重越大，平滑效果越小，模糊弱</li>
+<li>$\sigma$越大，中心比重越小，平滑效果越大，模糊强</li>
+</ul>
+<p>窗宽影响：</p>
+<ul>
+<li>窗宽越大，归一化时分母越多，平滑效果越大</li>
+<li>窗宽越小，归一化时分母越少，平滑效果越小</li>
+</ul>
+<p>经验：</p>
+<p>$$
+w = 2 * 3 \sigma + 1
+$$</p>
+<p>高斯核可以过滤高频信息，高斯卷积的结果是另一个高斯 </p>
+<p>⇒ <strong>连续多次高斯卷积，等价于一个大的高斯核卷积</strong></p>
+<p>⇒ <strong>高斯核可以分解，大的高斯核运行时间长，拆分成多个小的高斯核可以提高程序的运行效率</strong></p>
+<p>⇒ <strong>高斯核二维卷积可以拆分成两个一维卷积</strong></p>
+<p><code>n x n</code> 二维卷积（ <code>O(n^2)</code> ）可以拆分成为水平方向 <code>1 x n</code> 和 竖直方向 <code>n x 1</code> 的组合卷积（ <code>O(2n)</code> ）</p>
+<h2 id="_12">图片噪声</h2>
+<ul>
+<li>椒盐噪声（Impulse Noise）<ul>
+<li>黑点 + 白点 → 中值滤波器 Median</li>
+</ul>
+</li>
+<li>随机噪声（Gaussian Noise）<ul>
+<li>噪声满足随机分布 → 高斯滤波器</li>
+</ul>
+</li>
+<li>均匀噪声（Uniform Noise）<ul>
+<li>噪声服从均匀分布（每个值出现概率相同）→ 均值滤波器，高斯滤波器</li>
+</ul>
+</li>
+<li>泊松噪声（Poisson Noise）<ul>
+<li>噪声强度和信号强度有关（亮处噪声大，暗处噪声小）→ 高斯滤波器，非局部均值滤波器</li>
+<li>非局部均值滤波器 → 不只看附近像素，而是去全图找长的像的块，然后平均</li>
+</ul>
+</li>
+</ul></p>
+    </article>
+</section>
+            <!-- endblock -->
+
+            <!-- block footer -->
+                <footer>
+    <div class="d-flex flex-sm-row justify-content-between py-2 border-top drac-text-black drac-bg-cyan-green">
+        <a href="https://github.com/dracula/mkdocs" target="_blank" style="padding-left: 1%;"
+            class="footer-text drac-anchor drac-text-black drac-text-purple--hover">
+            Made with Dracula Theme for MkDocs
+        </a>
+    </div>
+</footer>
+            <!-- endblock -->
+        </div>
+
+    </main>
+
+        <script>var base_url = '../..';</script>
+        <script src="../../assets/js/jquery-3.3.1.slim.min.js"></script>
+        <script src="../../assets/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/js/mkdocs.js"></script>
+			<script src="../../search/main.js" defer></script>
+
+</body>
+
+</html>
