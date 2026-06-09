@@ -133,13 +133,13 @@
 <p>滤波器通过卷积运算对图像进行<strong>增强、平滑、去噪、边缘检测</strong>和<strong>特征提取</strong>。</p>
 <h2 id="filter_1">Filter 特性</h2>
 <h3 id="_1">线性</h3>
-<p>$$
+<div class="arithmatex">\[
 filter(af_1 + bf_2) = afilter(f_1) + bfilter(f_2)
-$$</p>
+\]</div>
 <h3 id="_2">平移不变性</h3>
-<p>$$
+<div class="arithmatex">\[
 filter(shift(f_1)) = shift(filter(f_1))
-$$</p>
+\]</div>
 <h2 id="_3">边界情况</h2>
 <p>卷积后图像尺寸通常会减小，因此常通过 Padding（填充）扩展边界，使输入输出尺寸保持一致。</p>
 <p>这样做的的目的是：<strong>固定输入输出的尺寸</strong></p>
@@ -304,6 +304,7 @@ $$</p>
 </table>
 
 <ul>
+<li>Laplacian sharpening</li>
 <li>利用上下左右四个方向 → 相当于 原图 + Laplacian</li>
 <li>边缘增强较温和</li>
 <li>不容易放大噪声</li>
@@ -372,8 +373,8 @@ $$</p>
 <p>对高斯核进行归一化，可以避免衰减图像。</p>
 <p>标准差的影响：</p>
 <ul>
-<li>$\sigma$越小，中心比重越大，平滑效果越小，模糊弱</li>
-<li>$\sigma$越大，中心比重越小，平滑效果越大，模糊强</li>
+<li><span class="arithmatex">\(\sigma\)</span>越小，中心比重越大，平滑效果越小，模糊弱</li>
+<li><span class="arithmatex">\(\sigma\)</span>越大，中心比重越小，平滑效果越大，模糊强</li>
 </ul>
 <p>窗宽影响：</p>
 <ul>
@@ -381,9 +382,9 @@ $$</p>
 <li>窗宽越小，归一化时分母越少，平滑效果越小</li>
 </ul>
 <p>经验：</p>
-<p>$$
+<div class="arithmatex">\[
 w = 2 * 3 \sigma + 1
-$$</p>
+\]</div>
 <p>高斯核可以过滤高频信息，高斯卷积的结果是另一个高斯 </p>
 <p>⇒ <strong>连续多次高斯卷积，等价于一个大的高斯核卷积</strong></p>
 <p>⇒ <strong>高斯核可以分解，大的高斯核运行时间长，拆分成多个小的高斯核可以提高程序的运行效率</strong></p>
@@ -422,6 +423,7 @@ $$</p>
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../../js/base.js"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script src="../../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
