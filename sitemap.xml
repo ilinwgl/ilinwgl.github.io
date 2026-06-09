@@ -8,25 +8,11 @@
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/"/>
     </url>
     <url>
-        <loc>Noneindex_zh/</loc>
-        <lastmod>2026-06-09</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneindex_zh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/index_zh/"/>
-    </url>
-    <url>
         <loc>Nonedotnet/</loc>
         <lastmod>2026-06-09</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Nonedotnet/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/dotnet/"/>
-    </url>
-    <url>
-        <loc>Nonedotnet/index_zh/</loc>
-        <lastmod>2026-06-09</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonedotnet/index_zh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/dotnet/index_zh/"/>
     </url>
     <url>
         <loc>Nonevision/</loc>
@@ -43,20 +29,6 @@
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/filter/"/>
     </url>
     <url>
-        <loc>Nonevision/filter_zh/</loc>
-        <lastmod>2026-06-09</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonevision/filter_zh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/filter_zh/"/>
-    </url>
-    <url>
-        <loc>Nonevision/index_zh/</loc>
-        <lastmod>2026-06-09</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonevision/index_zh/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/index_zh/"/>
-    </url>
-    <url>
         <loc>Nonezh/</loc>
         <lastmod>2026-06-09</lastmod>
         <changefreq>daily</changefreq>
@@ -64,25 +36,11 @@
         <xhtml:link rel="alternate" hreflang="en" href="None"/>
     </url>
     <url>
-        <loc>Nonezh/index_zh/</loc>
-        <lastmod>2026-06-09</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/index_zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneindex_zh/"/>
-    </url>
-    <url>
         <loc>Nonezh/dotnet/</loc>
         <lastmod>2026-06-09</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/dotnet/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonedotnet/"/>
-    </url>
-    <url>
-        <loc>Nonezh/dotnet/index_zh/</loc>
-        <lastmod>2026-06-09</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/dotnet/index_zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonedotnet/index_zh/"/>
     </url>
     <url>
         <loc>Nonezh/vision/</loc>
@@ -97,19 +55,5 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/filter/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonevision/filter/"/>
-    </url>
-    <url>
-        <loc>Nonezh/vision/filter_zh/</loc>
-        <lastmod>2026-06-09</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/filter_zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonevision/filter_zh/"/>
-    </url>
-    <url>
-        <loc>Nonezh/vision/index_zh/</loc>
-        <lastmod>2026-06-09</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/index_zh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonevision/index_zh/"/>
     </url>
 </urlset>
