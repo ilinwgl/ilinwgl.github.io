@@ -1152,10 +1152,12 @@ These usually correspond to:
 <ul>
 <li>3×3 fixed convolution kernels</li>
 <li>Uses uniform weights to approximate derivatives</li>
-<li>Characteristics:</li>
+<li>Characteristics:<ul>
 <li>Simple and efficient</li>
 <li>Sensitive to noise</li>
 <li>Moderate accuracy</li>
+</ul>
+</li>
 </ul>
 <h3 id="sobel">Sobel</h3>
 <div style="display:flex; gap:20px;">
@@ -1197,11 +1199,13 @@ These usually correspond to:
 
 <ul>
 <li>Improvement over Prewitt by introducing center weighting</li>
-<li>Characteristics:</li>
+<li>Characteristics:<ul>
 <li>Higher weight on central pixels</li>
 <li>Better noise robustness</li>
 <li>Separable filter (efficient implementation) -&gt; Can be interpreted as:<ul>
 <li>smoothing kernel + differentiation kernel <span class="arithmatex">\([-1, 2, -1]^T · [-1, 0, +1]\)</span></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1226,10 +1230,12 @@ These usually correspond to:
 
 <ul>
 <li>Improved version of Sobel</li>
-<li>Characteristics:</li>
+<li>Characteristics:<ul>
 <li>Better rotational symmetry</li>
 <li>More accurate directional estimation</li>
 <li>Improved stability over Sobel</li>
+</ul>
+</li>
 </ul>
 <h3 id="roberts">Roberts</h3>
 <div style="display:flex; gap:20px;">
@@ -1257,22 +1263,30 @@ These usually correspond to:
 
 <ul>
 <li>Computes diagonal differences (45° directions)</li>
-<li>Characteristics:</li>
+<li>Characteristics:<ul>
 <li>Highly sensitive</li>
 <li>Very noise-sensitive</li>
 <li>Suitable for fast, coarse edge detection</li>
 </ul>
+</li>
+</ul>
 <h3 id="gaussian-derivative-filters">Gaussian Derivative Filters</h3>
 <ul>
-<li>When images contain noise:</li>
+<li>When images contain noise:<ol>
 <li>Apply Gaussian smoothing (denoising)</li>
 <li>Compute derivatives</li>
-<li>Since both operations are convolutions, they can be combined into:</li>
+</ol>
+</li>
+<li>Since both operations are convolutions, they can be combined into:<ul>
 <li>Derivative of Gaussian (DoG kernel in continuous form)</li>
+</ul>
+</li>
 <li>a first-order derivative filter that already incorporates smoothing</li>
-<li>Characteristics:</li>
+<li>Characteristics:<ul>
 <li>Combines smoothing and differentiation</li>
 <li>Fundamental component of the Canny detector</li>
+</ul>
+</li>
 </ul>
 <h2 id="second-order-derivative-methods-second-derivative">Second-Order Derivative Methods (Second derivative)</h2>
 <p><strong>Core Idea:</strong></p>
@@ -1283,24 +1297,32 @@ These usually correspond to:
 <ul>
 <li>Direct computation of second-order derivatives</li>
 <li>Isotropic (direction-independent)</li>
-<li>Characteristics:</li>
+<li>Characteristics:<ul>
 <li>Highly sensitive to noise</li>
 <li>Amplifies high-frequency components</li>
+</ul>
+</li>
 </ul>
 <p><strong>Second derivative = enhanced high-frequency signals + noise = high-frequency content → Laplacian acts like an ‘amplifier of noise’.</strong></p>
 <h3 id="laplacian-of-gaussian-log">Laplacian of Gaussian (LoG)</h3>
 <ul>
-<li>Standard pipeline:</li>
+<li>Standard pipeline:<ol>
 <li>Gaussian smoothing (denoising)</li>
 <li>Laplacian (second derivative) → detect structural changes, enhance edges</li>
 <li>zero-crossing (edge detection)</li>
+</ol>
+</li>
 <li>First smooth, then detect changes</li>
-<li>Scale control</li>
+<li>Scale control<ul>
 <li>small <span class="arithmatex">\(\sigma\)</span>  → fine detail edges</li>
 <li>large <span class="arithmatex">\(\sigma\)</span>  → only large structures are preserved</li>
-<li>Characteristics:</li>
+</ul>
+</li>
+<li>Characteristics:<ul>
 <li>more stable than Laplacian</li>
 <li>a classical theoretical mode</li>
+</ul>
+</li>
 </ul>
 <h2 id="approximation-methods">Approximation Methods</h2>
 <h3 id="difference-of-gaussian-dog">Difference of Gaussian (DoG)</h3>
@@ -1310,17 +1332,13 @@ These usually correspond to:
 <span style="color:#d62728; font-weight:bold;"><span class="arithmatex">\(DoG = G(\sigma_1) − G(\sigma_2), where \sigma_2 &gt; \sigma_1\)</span></span></p>
 </blockquote>
 <ul>
-<li>
-<p>Gaussian acts as a blur operator:</p>
-<ul>
+<li>Gaussian acts as a blur operator:<ul>
 <li>small <span class="arithmatex">\(\sigma\)</span> → slight blurring</li>
 <li>large <span class="arithmatex">\(\sigma\)</span> → strong blurring</li>
-<li>Subtracting a strongly blurred image from a slightly blurred image results in nearly zero difference in flat regions, while producing large differences and strong responses around edges, thereby enabling the extraction of edge information.</li>
 </ul>
 </li>
-<li>
-<p>Characteristics:</p>
-<ul>
+<li>Subtracting a strongly blurred image from a slightly blurred image results in nearly zero difference in flat regions, while producing large differences and strong responses around edges, thereby enabling the extraction of edge information.</li>
+<li>Characteristics:<ul>
 <li>Computationally efficient</li>
 <li>Multi-scale representation</li>
 <li>Foundation of SIFT feature detection</li>
@@ -1383,9 +1401,11 @@ These usually correspond to:
 </li>
 <li>
 <p>The final result is determined based on connectivity:</p>
-</li>
+<ul>
 <li>Only weak edges connected to strong edges are preserved.</li>
 <li>Weak edges that are not connected to strong edges are suppressed (removed).</li>
+</ul>
+</li>
 </ul>
 <p>👉 The essence is to exploit the <strong>spatial continuity (connectivity) of edges</strong>, preserving true edges while suppressing noise.</p>
 <h4 id="summary">Summary</h4>
@@ -1412,10 +1432,12 @@ These usually correspond to:
 </li>
 <li>
 <p>Characteristics:</p>
-</li>
+<ul>
 <li>simple</li>
 <li>suitable for binary / industrial images</li>
 <li>does not rely on gradients</li>
+</ul>
+</li>
 </ul>
 <h3 id="phase-congruency">Phase Congruency</h3>
 <p><strong>Core Idea:</strong></p>
@@ -1423,24 +1445,28 @@ These usually correspond to:
 <p><span style="color:#d62728; font-weight:bold;">Edge = locations where phases are congruent across multiple scales in the Fourier domain.</span></p>
 </blockquote>
 <ul>
-<li>An image can be decomposed into:</li>
-<li>different frequencies</li>
 <li>
-<p>different phases</p>
+<p>An image can be decomposed into:</p>
+<ul>
+<li>different frequencies</li>
+<li>different phases</li>
+</ul>
 </li>
 <li>
 <p>Determine whether the signal structures are aligned.</p>
-</li>
+<ul>
 <li>Edge points → all frequency components (low-frequency + high-frequency) are aligned at the same location → energy is concentrated.</li>
-<li>
-<p>Non-edge points → frequency components are not synchronized and phases are disordered → unstable and dispersed.</p>
+<li>Non-edge points → frequency components are not synchronized and phases are disordered → unstable and dispersed.</li>
+</ul>
 </li>
 <li>
 <p>Characteristics:</p>
-</li>
+<ul>
 <li>independent of image brightness</li>
 <li>highly robust to illumination changes</li>
 <li>close to human perception</li>
+</ul>
+</li>
 </ul>
 <p><img alt="Edge_Detection" src="/docs/images/edge_detection_demo.png" /></p>
 
