@@ -1307,16 +1307,18 @@ These usually correspond to:
 <p><strong>Core Idea:</strong></p>
 <blockquote>
 <p><strong>Approximates LoG using two Gaussian blurred images:</strong>
-<span style="color:#d62728; font-weight:bold;"><span class="arithmatex">\(DoG = G(\sigma_1) − G(\sigma_2), where \sigma_2 &gt; \sigma_1\)</span></span>
-- Gaussian acts as a blur operator:
-  - small <span class="arithmatex">\(\sigma\)</span> → slight blurring
-  - large <span class="arithmatex">\(\sigma\)</span> → strong blurring
-  - Subtracting a strongly blurred image from a slightly blurred image results in nearly zero difference in flat regions, while producing large differences and strong responses around edges, thereby enabling the extraction of edge information.
-- Characteristics:
-  - Computationally efficient
-  - Multi-scale representation
-  - Foundation of SIFT feature detection</p>
+<span style="color:#d62728; font-weight:bold;"><span class="arithmatex">\(DoG = G(\sigma_1) − G(\sigma_2), where \sigma_2 &gt; \sigma_1\)</span></span></p>
 </blockquote>
+<ul>
+<li>Gaussian acts as a blur operator:</li>
+<li>small <span class="arithmatex">\(\sigma\)</span> → slight blurring</li>
+<li>large <span class="arithmatex">\(\sigma\)</span> → strong blurring</li>
+<li>Subtracting a strongly blurred image from a slightly blurred image results in nearly zero difference in flat regions, while producing large differences and strong responses around edges, thereby enabling the extraction of edge information.</li>
+<li>Characteristics:</li>
+<li>Computationally efficient</li>
+<li>Multi-scale representation</li>
+<li>Foundation of SIFT feature detection</li>
+</ul>
 <h2 id="practical-methods">Practical Methods</h2>
 <h3 id="canny">Canny</h3>
 <ul>
@@ -1372,11 +1374,13 @@ These usually correspond to:
 <p>👉 The essence is to exploit the <strong>spatial continuity (connectivity) of edges</strong>, preserving true edges while suppressing noise.</p>
 <h4 id="summary">Summary</h4>
 <blockquote>
-<p><span style="color:#d62728; font-weight:bold;">Canny = Gaussian smoothing → Gradient → NMS → Double threshold → Hysteresis</span>
-- good detection
-- good localization
-- single response</p>
+<p><span style="color:#d62728; font-weight:bold;">Canny = Gaussian smoothing → Gradient → NMS → Double threshold → Hysteresis</span></p>
 </blockquote>
+<ul>
+<li>good detection</li>
+<li>good localization</li>
+<li>single response</li>
+</ul>
 <h2 id="non-gradient-methods">Non-Gradient Methods</h2>
 <h3 id="morphology">Morphology</h3>
 <p><strong>Core Idea:</strong></p>

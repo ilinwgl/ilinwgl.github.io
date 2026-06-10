@@ -1105,7 +1105,10 @@
 </div>
 
 <h2 id="gradient-based">一阶求导（Gradient-based）</h2>
-<p><span style="font-weight:bold;">核心思想：</span><span style="color:#d62728; font-weight:bold;">一阶导数 = 梯度</span> → <span style="color:#1f77b4; font-weight:bold;">边缘 = 梯度幅值大的位置</span></p>
+<p><strong>核心思想：</strong></p>
+<blockquote>
+<p><span style="color:#d62728; font-weight:bold;">一阶导数 = 梯度</span> → <span style="color:#1f77b4; font-weight:bold;">边缘 = 梯度幅值大的位置</span></p>
+</blockquote>
 <h3 id="prewitt">Prewitt</h3>
 <div style="display:flex; gap:20px;">
     <table border="1">
@@ -1270,7 +1273,10 @@
 </li>
 </ul>
 <h2 id="second-derivative">二阶求导（Second derivative）</h2>
-<p><span style="font-weight:bold;">核心思想：</span><span style="color:#d62728; font-weight:bold;">边缘 = 二阶导数的零交叉点（zero-crossing）</span></p>
+<p><strong>核心思想：</strong></p>
+<blockquote>
+<p><span style="color:#d62728; font-weight:bold;">边缘 = 二阶导数的零交叉点（zero-crossing）</span></p>
+</blockquote>
 <h3 id="laplacian">Laplacian</h3>
 <ul>
 <li>对图片直接求二阶导，寻找零交叉点</li>
@@ -1297,8 +1303,12 @@
 </ul>
 <h2 id="_4">近似/差分</h2>
 <h3 id="dog">DoG</h3>
+<p><strong>核心思想：</strong></p>
+<blockquote>
+<p><strong>类似于LoG，对图片使用两种高斯模糊：</strong>
+<span style="color:#d62728; font-weight:bold;"><span class="arithmatex">\(DoG = G(\sigma_1) − G(\sigma_2), where \sigma_2 &gt; \sigma_1\)</span></span></p>
+</blockquote>
 <ul>
-<li>近似LoG，用两个模糊版本相减 → <span class="arithmatex">\(DoG = G(σ1) - G(σ2)\)</span> 通常 <span class="arithmatex">\(\sigma2 &gt; \sigma1\)</span></li>
 <li>Gaussian是模糊器：</li>
 <li>小 <span class="arithmatex">\(\sigma\)</span> → 轻微模糊</li>
 <li>大 <span class="arithmatex">\(\sigma\)</span> → 强烈模糊</li>
@@ -1348,7 +1358,9 @@
 </ul>
 <p>👉 本质是利用<strong>边缘的空间连续性（connectivity）</strong>，在保留真实边缘的同时抑制噪声。</p>
 <h4 id="_7">总结</h4>
+<blockquote>
 <p><span style="color:#d62728; font-weight:bold;">Canny = Gaussian smoothing → Gradient → NMS → Double threshold → Hysteresis</span></p>
+</blockquote>
 <ul>
 <li>高检测率（good detection）</li>
 <li>精确定位（good localization）</li>
@@ -1356,8 +1368,12 @@
 </ul>
 <h2 id="_8">非梯度方法</h2>
 <h3 id="morphology">形态学（Morphology）</h3>
+<p><strong>核心思想:</strong></p>
+<blockquote>
+<p><strong>基于形态学操作：</strong>
+<span style="color:#d62728; font-weight:bold;"> <span class="arithmatex">\(Edge = Dilate(I) - Erode(I)\)</span> </span></p>
+</blockquote>
 <ul>
-<li>基于形态学操作 → <span class="arithmatex">\(Edge = Dilate(I) - Erode(I)\)</span></li>
 <li>Dilate让亮的区域变大，物体变粗</li>
 <li>Erode让亮的区域变小，物体变细</li>
 <li>Dilate - Erode ⇒ 边界被扩张和收缩之间的差异 → 轮廓区域</li>
@@ -1367,8 +1383,11 @@
 <li>不依赖梯度</li>
 </ul>
 <h3 id="phase-congruency">Phase Congruency</h3>
+<p><strong>核心思想:</strong></p>
+<blockquote>
+<p><span style="color:#d62728; font-weight:bold;">边缘 = 多尺度傅里叶中“相位一致”的位置 </span></p>
+</blockquote>
 <ul>
-<li>边缘 = 多尺度傅里叶中“相位一致”的位置 </li>
 <li>图像可以分解为：</li>
 <li>不同频率（frequency）</li>
 <li>
