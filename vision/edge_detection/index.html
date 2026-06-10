@@ -1310,19 +1310,29 @@ These usually correspond to:
 <span style="color:#d62728; font-weight:bold;"><span class="arithmatex">\(DoG = G(\sigma_1) − G(\sigma_2), where \sigma_2 &gt; \sigma_1\)</span></span></p>
 </blockquote>
 <ul>
-<li>Gaussian acts as a blur operator:</li>
+<li>
+<p>Gaussian acts as a blur operator:</p>
+<ul>
 <li>small <span class="arithmatex">\(\sigma\)</span> → slight blurring</li>
 <li>large <span class="arithmatex">\(\sigma\)</span> → strong blurring</li>
 <li>Subtracting a strongly blurred image from a slightly blurred image results in nearly zero difference in flat regions, while producing large differences and strong responses around edges, thereby enabling the extraction of edge information.</li>
-<li>Characteristics:</li>
+</ul>
+</li>
+<li>
+<p>Characteristics:</p>
+<ul>
 <li>Computationally efficient</li>
 <li>Multi-scale representation</li>
 <li>Foundation of SIFT feature detection</li>
 </ul>
+</li>
+</ul>
 <h2 id="practical-methods">Practical Methods</h2>
 <h3 id="canny">Canny</h3>
 <ul>
-<li>Detection pipeline</li>
+<li>
+<p>Detection pipeline</p>
+<ol>
 <li>
 <p><strong>Gaussian Smoothing</strong></p>
 <ul>
@@ -1336,16 +1346,20 @@ These usually correspond to:
 </ul>
 </li>
 <li>
-<p><strong>Non-Maximum Suppression (NMS)</strong>
-        - Perform local maximum detection along the gradient direction and retain only potential edge pixels, producing thin edges.</p>
+<p><strong>Non-Maximum Suppression (NMS)</strong></p>
+<ul>
+<li>Perform local maximum detection along the gradient direction and retain only potential edge pixels, producing thin edges.</li>
+</ul>
 </li>
 <li>
 <p><strong>Double Thresholding</strong></p>
 <ul>
-<li>According to the high and low thresholds, pixels are classified into:</li>
+<li>According to the high and low thresholds, pixels are classified into:<ul>
 <li>strong edges</li>
 <li>weak edges</li>
 <li>non-edges (suppressed)</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>
@@ -1353,6 +1367,8 @@ These usually correspond to:
 <ul>
 <li>Preserve weak edges connected to strong edges and remove isolated noise points.</li>
 </ul>
+</li>
+</ol>
 </li>
 </ul>
 <h4 id="non-maximum-suppression"><strong>Non-Maximum Suppression</strong></h4>
