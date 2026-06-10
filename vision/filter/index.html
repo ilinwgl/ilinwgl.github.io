@@ -1306,20 +1306,20 @@ filter(shift(f_1)) = shift(filter(f_1))
 <p>Normalizing the Gaussian kernel prevents the image intensity from being attenuated.</p>
 <p>Effect of Standard Deviation
 - Smaller <span class="arithmatex">\(\sigma\)</span>
-  - Larger center weight
-  - Weaker smoothing
-  - Less blur
+    - Larger center weight
+    - Weaker smoothing
+    - Less blur
 - Larger <span class="arithmatex">\(\sigma\)</span>
-  - More evenly distributed weights
-  - Stronger smoothing
-  - More blur</p>
+    - More evenly distributed weights
+    - Stronger smoothing
+    - More blur</p>
 <p>Effect of Window Size
 - Larger window size
-  - More elements in normalization
-  - Stronger smoothing
+    - More elements in normalization
+    - Stronger smoothing
 - Smaller window size
-  - Fewer elements in normalization
-  - Weaker smoothing</p>
+    - Fewer elements in normalization
+    - Weaker smoothing</p>
 <p>Rule of Thumb:</p>
 <div class="arithmatex">\[
 w = 2 * 3 \sigma + 1
@@ -1335,25 +1335,33 @@ Therefore:</p>
 <p>An <code>n x n</code> 2D convolution with complexity (<code>O(n^2)</code>) can be decomposed into: a horizontal convolution <code>1 x n</code> and a vertical convolution <code>n x 1</code> with complexity (<code>O(2n)</code>)</p>
 <h2 id="image-noise">Image Noise</h2>
 <ul>
-<li>Salt-and-Pepper Noise (Impulse Noise)</li>
+<li>Salt-and-Pepper Noise (Impulse Noise)<ul>
 <li>Random black and white pixels.</li>
 <li>Removed effectively by the Median Filter.</li>
-<li>Gaussian Noise</li>
+</ul>
+</li>
+<li>Gaussian Noise<ul>
 <li>Random noise following a Gaussian distribution.</li>
 <li>Commonly reduced using the Gaussian Filter.</li>
-<li>Uniform Noise</li>
+</ul>
+</li>
+<li>Uniform Noise<ul>
 <li>Noise values are uniformly distributed.</li>
 <li>Can be reduced by:<ul>
 <li>Mean Filter</li>
 <li>Gaussian Filter</li>
 </ul>
 </li>
-<li>Poisson Noise</li>
+</ul>
+</li>
+<li>Poisson Noise<ul>
 <li>Signal-dependent noise.</li>
 <li>Brighter regions contain stronger noise, while darker regions contain weaker noise.</li>
 <li>Common methods:<ul>
 <li>Gaussian Filter</li>
 <li>Non-Local Means (NLM)</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
