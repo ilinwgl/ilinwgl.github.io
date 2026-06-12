@@ -9,16 +9,16 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../edge_detection/">
       
       
-        <link rel="next" href="../edge_detection/">
+        <link rel="next" href="../../dotnet/">
       
       
         
           <link rel="alternate" href="./" hreflang="en">
         
-          <link rel="alternate" href="../../zh/vision/filter/" hreflang="zh">
+          <link rel="alternate" href="../../zh/vision/fitting/" hreflang="zh">
         
       
       
@@ -27,7 +27,7 @@
     
     
       
-        <title>Filter - Develop Notes</title>
+        <title>Fitting - Develop Notes</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#filter" class="md-skip">
+        <a href="#fitting" class="md-skip">
           Skip to content
         </a>
       
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Filter
+              Fitting
             
           </span>
         </div>
@@ -131,7 +131,7 @@
           </li>
         
           <li class="md-select__item">
-            <a href="../../zh/vision/filter/" hreflang="zh" class="md-select__link">
+            <a href="../../zh/vision/fitting/" hreflang="zh" class="md-select__link">
               简体中文
             </a>
           </li>
@@ -327,37 +327,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Filter
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../filter/" class="md-nav__link">
         
   
   
@@ -373,270 +346,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#properties-of-filters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Properties of Filters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Properties of Filters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#linearity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Linearity
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#shift-invariance" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Shift Invariance
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#boundary-handling" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Boundary Handling
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Boundary Handling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#zero-padding" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Zero Padding
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#replicate" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Replicate
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reflect" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reflect
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#circular" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Circular
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#common-kernels" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Common Kernels
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Common Kernels">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#identity" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Identity
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#left-shift" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Left Shift
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#right-shift" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Right Shift
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mean-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mean Filter
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sharpening-filters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sharpening Filters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Sharpening Filters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sharpening-a" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sharpening A
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sharpening-b" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sharpening B
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sharpening-c" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sharpening C
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gaussian-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Gaussian Filter
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#image-noise" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Image Noise
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -674,10 +383,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../fitting/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fitting
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -693,6 +429,332 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#difficulties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Difficulties:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#least-squares-line-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Least Squares Line Fitting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Least Squares Line Fitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Idea
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitations:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#total-least-squares-orthogonal-least-squares" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Total Least Squares (Orthogonal Least Squares)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Total Least Squares (Orthogonal Least Squares)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-idea_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Idea
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Properties:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limitation:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#robust-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robust Estimators
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Robust Estimators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-idea_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Idea
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-m-estimators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common M-estimators:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ransac-random-sample-consensus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RANSAC (Random Sample Consensus)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RANSAC (Random Sample Consensus)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adaptive-ransac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adaptive RANSAC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adaptive RANSAC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-idea_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Idea
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Idea:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overfitting-vs-underfitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overfitting vs Underfitting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overfitting vs Underfitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#underfitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Underfitting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overfitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overfitting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametric-vs-non-parametric-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parametric vs Non-parametric Fitting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parametric vs Non-parametric Fitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametric-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parametric Fitting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-parametric-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-parametric Fitting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -814,22 +876,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#properties-of-filters" class="md-nav__link">
+  <a href="#difficulties" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Properties of Filters
+        Difficulties:
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Properties of Filters">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Methods
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#least-squares-line-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Least Squares Line Fitting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Least Squares Line Fitting">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#linearity" class="md-nav__link">
+  <a href="#core-idea" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Linearity
+        Core Idea
       
     </span>
   </a>
@@ -837,10 +921,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#shift-invariance" class="md-nav__link">
+  <a href="#limitations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Shift Invariance
+        Limitations:
       
     </span>
   </a>
@@ -853,22 +937,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#boundary-handling" class="md-nav__link">
+  <a href="#total-least-squares-orthogonal-least-squares" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Boundary Handling
+        Total Least Squares (Orthogonal Least Squares)
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Boundary Handling">
+    <nav class="md-nav" aria-label="Total Least Squares (Orthogonal Least Squares)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#zero-padding" class="md-nav__link">
+  <a href="#core-idea_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Zero Padding
+        Core Idea
       
     </span>
   </a>
@@ -876,10 +960,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#replicate" class="md-nav__link">
+  <a href="#properties" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Replicate
+        Properties:
       
     </span>
   </a>
@@ -887,21 +971,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#reflect" class="md-nav__link">
+  <a href="#limitation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Reflect
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#circular" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Circular
+        Limitation:
       
     </span>
   </a>
@@ -914,22 +987,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#common-kernels" class="md-nav__link">
+  <a href="#robust-estimators" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Common Kernels
+        Robust Estimators
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Common Kernels">
+    <nav class="md-nav" aria-label="Robust Estimators">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#identity" class="md-nav__link">
+  <a href="#core-idea_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Identity
+        Core Idea
       
     </span>
   </a>
@@ -937,88 +1010,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#left-shift" class="md-nav__link">
+  <a href="#common-m-estimators" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Left Shift
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#right-shift" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Right Shift
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mean-filter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mean Filter
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sharpening-filters" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sharpening Filters
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Sharpening Filters">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#sharpening-a" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sharpening A
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sharpening-b" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sharpening B
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sharpening-c" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Sharpening C
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Summary
+        Common M-estimators:
       
     </span>
   </a>
@@ -1029,6 +1024,40 @@
     </nav>
   
 </li>
+      
+        <li class="md-nav__item">
+  <a href="#ransac-random-sample-consensus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RANSAC (Random Sample Consensus)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RANSAC (Random Sample Consensus)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procedure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parameters:
+      
+    </span>
+  </a>
+  
+</li>
         
       </ul>
     </nav>
@@ -1036,24 +1065,119 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#gaussian-filter" class="md-nav__link">
+  <a href="#adaptive-ransac" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Gaussian Filter
+        Adaptive RANSAC
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Adaptive RANSAC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-idea_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Idea
       
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#image-noise" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#key-idea" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Image Noise
+        Key Idea:
       
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overfitting-vs-underfitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overfitting vs Underfitting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overfitting vs Underfitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#underfitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Underfitting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overfitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overfitting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parametric-vs-non-parametric-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parametric vs Non-parametric Fitting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Parametric vs Non-parametric Fitting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametric-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Parametric Fitting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-parametric-fitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Non-parametric Fitting
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1074,328 +1198,174 @@
 
 
 
-<h1 id="filter">Filter</h1>
-<p>A filter is a weight matrix (kernel), and convolution is the operation that applies the filter to an image.</p>
+<h1 id="fitting">Fitting</h1>
+<p>After edge extraction, we need to fit geometric models (lines, circles, curves, etc.) to the edge points, i.e., use mathematical models to describe edges.</p>
+<h2 id="difficulties">Difficulties:</h2>
 <ul>
-<li>Filter = Kernel</li>
-<li>Convolution = Operation → multiply the kernel weights with image pixels and sum them to obtain the output value.</li>
+<li>Noise</li>
+<li>Outliers</li>
+<li>Missing data</li>
 </ul>
-<p>Filters are used for:</p>
-<ul>
-<li>Image enhancement</li>
-<li>Smoothing</li>
-<li>Noise reduction</li>
-<li>Edge detection</li>
-<li>Feature extraction</li>
-</ul>
-<h2 id="properties-of-filters">Properties of Filters</h2>
-<h3 id="linearity">Linearity</h3>
-<div class="arithmatex">\[
-filter(af_1 + bf_2) = afilter(f_1) + bfilter(f_2)
-\]</div>
-<h3 id="shift-invariance">Shift Invariance</h3>
-<div class="arithmatex">\[
-filter(shift(f_1)) = shift(filter(f_1))
-\]</div>
-<h2 id="boundary-handling">Boundary Handling</h2>
-<p>Convolution usually reduces the image size. Therefore, padding is commonly used to extend the image boundary so that the input and output sizes remain the same.</p>
-<p>The purpose of padding is to <strong>keep the input and output dimensions unchanged.</strong></p>
-<p>Assume the original image is:</p>
-<pre><code>1 2 3
-4 5 6
-7 8 9
-</code></pre>
-<h3 id="zero-padding">Zero Padding</h3>
-<p>Fill the boundary with zeros. → Commonly used in CNNs.</p>
-<pre><code>0 0 0 0 0
-0 1 2 3 0
-0 4 5 6 0
-0 7 8 9 0
-0 0 0 0 0
-</code></pre>
-<h3 id="replicate">Replicate</h3>
-<p>Extend the outermost pixels outward.</p>
-<pre><code>1 1 2 3 3
-1 1 2 3 3
-4 4 5 6 6
-7 7 8 9 9
-7 7 8 9 9
-</code></pre>
-<h3 id="reflect">Reflect</h3>
-<p>Reflect the image across its boundaries. → One of the most commonly used modes in OpenCV.</p>
-<pre><code>5 4 5 6 5
-2 1 2 3 2
-5 4 5 6 5
-8 7 8 9 8
-5 4 5 6 5
-</code></pre>
-<h3 id="circular">Circular</h3>
-<p>Treat the image as periodic, connecting the left edge to the right edge and the top edge to the bottom edge. → Commonly used in FFT-based processing.</p>
-<pre><code>9 7 8 9 7
-3 1 2 3 1
-6 4 5 6 4
-9 7 8 9 7
-3 1 2 3 1
-</code></pre>
-<h2 id="common-kernels">Common Kernels</h2>
-<h3 id="identity">Identity</h3>
+<h2 id="common-methods">Common Methods</h2>
 <table border="1">
     <tr>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>0</td>
-        <td>1</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-    </tr>
-</table>
-
-<h3 id="left-shift">Left Shift</h3>
-<table border="1">
-    <tr>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>0</td>
-        <td>0</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-    </tr>
-</table>
-
-<h3 id="right-shift">Right Shift</h3>
-<table border="1">
-    <tr>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-    </tr>
-</table>
-
-<h3 id="mean-filter">Mean Filter</h3>
-<table border="1">
-    <tr>
-        <td>1/9</td>
-        <td>1/9</td>
-        <td>1/9</td>
-    </tr>
-    <tr>
-        <td>1/9</td>
-        <td>1/9</td>
-        <td>1/9</td>
-    </tr>
-    <tr>
-        <td>1/9</td>
-        <td>1/9</td>
-        <td>1/9</td>
-    </tr>
-</table>
-
-<h3 id="sharpening-filters">Sharpening Filters</h3>
-<h4 id="sharpening-a">Sharpening A</h4>
-<table border="1">
-    <tr>
-        <td>-1/9</td>
-        <td>-1/9</td>
-        <td>-1/9</td>
-    </tr>
-    <tr>
-        <td>-1/9</td>
-        <td>17/9</td>
-        <td>-1/9</td>
-    </tr>
-    <tr>
-        <td>-1/9</td>
-        <td>-1/9</td>
-        <td>-1/9</td>
-    </tr>
-</table>
-
-<p>Characteristics:</p>
-<ul>
-<li>Uses all eight neighboring pixels.</li>
-<li>Produces more isotropic sharpening.</li>
-<li>Has uniform responses in all directions.</li>
-<li>Better preserves high-frequency information.</li>
-<li><strong>More sensitive to noise !!!</strong></li>
-</ul>
-<h4 id="sharpening-b">Sharpening B</h4>
-<table border="1">
-    <tr>
-        <td>0</td>
-        <td>-1</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>-1</td>
-        <td>5</td>
-        <td>-1</td>
-    </tr>
-    <tr>
-        <td>0</td>
-        <td>-1</td>
-        <td>0</td>
-    </tr>
-</table>
-
-<p>Characteristics:</p>
-<ul>
-<li>Laplacian sharpening.</li>
-<li>Uses four-neighborhood pixels.</li>
-<li>Equivalent to: Original Image + Laplacian</li>
-<li>Moderate edge enhancement.</li>
-<li>Less sensitive to noise.</li>
-<li>Computationally simple.</li>
-<li>Commonly used in OpenCV.</li>
-</ul>
-<h4 id="sharpening-c">Sharpening C</h4>
-<table border="1">
-    <tr>
-        <td>-1</td>
-        <td>-1</td>
-        <td>-1</td>
-    </tr>
-    <tr>
-        <td>-1</td>
-        <td>9</td>
-        <td>-1</td>
-    </tr>
-    <tr>
-        <td>-1</td>
-        <td>-1</td>
-        <td>-1</td>
-    </tr>
-</table>
-
-<p>Characteristics:</p>
-<ul>
-<li>Strong sharpening effect.</li>
-<li>Enhances edges significantly.</li>
-<li>May produce halo artifacts.</li>
-<li>Amplifies noise.</li>
-</ul>
-<h4 id="summary">Summary</h4>
-<table border="1">
-    <tr>
-        <th>Kernel</th>
-        <th>Neighborhood</th>
-        <th>Sharpening Strength</th>
-        <th>Noise Amplification</th>
-        <th>Characteristics</th>
+        <th>Scenario</th>
+        <th>Method</th>
     </tr>
     <tr>     
-        <td>Sharpening A</td>
-        <td>Four-neighborhood</td>
-        <td>Moderate</td>
-        <td>Low Most</td>
-        <td>commonly used</td>
+        <td>Most points lie approximately on a single line</td>
+        <td>Least Squares</td>
     </tr>
     <tr>
-        <td>Sharpening B</td>
-        <td>Eight-neighborhood</td>
-        <td>Smooth and natural</td>
-        <td>Medium</td>
-        <td>Unsharp Mask</td>
+        <td>Many outliers / noisy points</td>
+        <td>Robust Fitting、RANSAC</td>
     </tr>
     <tr>
-        <td>Sharpening C</td>
-        <td>Eight-neighborhood</td>
-        <td>Strong</td>
-        <td>High</td>
-        <td>May cause over-sharpening</td>
+        <td>Multiple lines exist in the image</td>
+        <td>RANSAC、Hough Transform</td>
     </tr>
 </table>
 
-<h2 id="gaussian-filter">Gaussian Filter</h2>
-<p>The center of a Gaussian kernel has larger weights, while the weights decrease toward the edges.</p>
-<p>Normalizing the Gaussian kernel prevents the image intensity from being attenuated.</p>
-<p>Effect of Standard Deviation
-- Smaller <span class="arithmatex">\(\sigma\)</span>
-    - Larger center weight
-    - Weaker smoothing
-    - Less blur
-- Larger <span class="arithmatex">\(\sigma\)</span>
-    - More evenly distributed weights
-    - Stronger smoothing
-    - More blur</p>
-<p>Effect of Window Size
-- Larger window size
-    - More elements in normalization
-    - Stronger smoothing
-- Smaller window size
-    - Fewer elements in normalization
-    - Weaker smoothing</p>
-<p>Rule of Thumb:</p>
+<h2 id="least-squares-line-fitting">Least Squares Line Fitting</h2>
+<h3 id="core-idea">Core Idea</h3>
+<p>Minimize:</p>
 <div class="arithmatex">\[
-w = 2 * 3 \sigma + 1
+\sum (y_i - m*x_i -b )^2
 \]</div>
-<p>Gaussian filters remove high-frequency information.</p>
-<p>The convolution of two Gaussian functions is still a Gaussian.
-Therefore:</p>
+<h3 id="limitations">Limitations:</h3>
 <ul>
-<li>Multiple Gaussian convolutions are equivalent to a single larger Gaussian convolution.</li>
-<li>Large Gaussian kernels can be decomposed into several smaller Gaussian kernels to improve computational efficiency.</li>
-<li>A 2D Gaussian convolution can be separated into two 1D convolutions.</li>
+<li>Cannot represent vertical lines</li>
+<li>Not rotation invariant</li>
 </ul>
-<p>An <code>n x n</code> 2D convolution with complexity (<code>O(n^2)</code>) can be decomposed into: a horizontal convolution <code>1 x n</code> and a vertical convolution <code>n x 1</code> with complexity (<code>O(2n)</code>)</p>
-<h2 id="image-noise">Image Noise</h2>
+<h2 id="total-least-squares-orthogonal-least-squares">Total Least Squares (Orthogonal Least Squares)</h2>
+<h3 id="core-idea_1">Core Idea</h3>
+<p>Minimize:</p>
+<div class="arithmatex">\[
+\sum_i{(\frac{ax_i+by_i+d}{\sqrt{a^2 + b^2}})^2}
+\]</div>
+<p>Constraint:</p>
+<div class="arithmatex">\[
+a^2 + b^2 = 1
+\]</div>
+<p>Equivalent form:</p>
+<div class="arithmatex">\[
+\sum{(ax_i + by_i +d)^2}
+\]</div>
+<h3 id="properties">Properties:</h3>
 <ul>
-<li>Salt-and-Pepper Noise (Impulse Noise)<ul>
-<li>Random black and white pixels.</li>
-<li>Removed effectively by the Median Filter.</li>
+<li>Uses orthogonal distance</li>
+<li>Rotation invariant</li>
+<li>Works for arbitrary orientations</li>
+</ul>
+<h3 id="limitation">Limitation:</h3>
+<ul>
+<li>Sensitive to outliers</li>
+</ul>
+<h2 id="robust-estimators">Robust Estimators</h2>
+<h3 id="core-idea_2">Core Idea</h3>
+<ul>
+<li>Small residual → high weight</li>
+<li>Large residual → low weight</li>
+</ul>
+<h3 id="common-m-estimators">Common M-estimators:</h3>
+<ul>
+<li>Huber</li>
+<li>Tukey</li>
+<li>Geman-McClure</li>
+<li>Cauchy</li>
+</ul>
+<p>Example Geman-McClure：</p>
+<div class="arithmatex">\[
+\rho = \frac{u^2}{\sigma ^ 2 + u^2}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(u\)</span> → residual</li>
+<li><span class="arithmatex">\(\sigma\)</span> → controls outlier influence</li>
+</ul>
+<h2 id="ransac-random-sample-consensus">RANSAC (Random Sample Consensus)</h2>
+<h3 id="procedure">Procedure</h3>
+<ul>
+<li>Randomly sample minimal set (2 points for line)</li>
+<li>Fit model</li>
+<li>Compute distances to all points</li>
+<li>Points below threshold are inliers</li>
+<li>Count inliers</li>
+<li>Repeat</li>
+<li>Choose best model</li>
+</ul>
+<h3 id="parameters">Parameters:</h3>
+<ul>
+<li>Sample size</li>
+<li>Threshold</li>
+<li>Iterations</li>
+</ul>
+<h2 id="adaptive-ransac">Adaptive RANSAC</h2>
+<h3 id="core-idea_3">Core Idea</h3>
+<blockquote>
+<p>Dynamically estimate outlier ratio and update iterations</p>
+</blockquote>
+<pre><code>N = ∞
+sample_count = 0
+
+while sample_count &lt; N:
+
+    RANSAC()
+
+    estimate outlier ratio e
+
+    compute N*
+
+    if N* &lt; N:
+        N = N*
+
+    sample_count += 1
+</code></pre>
+<ul>
+<li>outlier ratio: <span class="arithmatex">\(e\)</span></li>
+<li>inlier ratio: <span class="arithmatex">\(w = 1 - e\)</span></li>
+</ul>
+<p>If each iteration randomly selects <span class="arithmatex">\(s\)</span> points and we want the success probability to reach <span class="arithmatex">\(p\)</span>, then the required number of iterations is:</p>
+<div class="arithmatex">\[
+N = \frac{log(1-p)}{log(1-w^s)}
+\]</div>
+<h3 id="key-idea">Key Idea:</h3>
+<blockquote>
+<p>As more inliers are found, the required number of iterations decreases, avoiding unnecessary computation from a fixed iteration count.</p>
+</blockquote>
+<h2 id="overfitting-vs-underfitting">Overfitting vs Underfitting</h2>
+<h3 id="underfitting">Underfitting</h3>
+<p>Model is too simple:
+- cannot represent the data well
+- Large error</p>
+<h3 id="overfitting">Overfitting</h3>
+<p>Model is too complex:
+- Fits noise as well
+- Poor generalization</p>
+<p>Goal:</p>
+<blockquote>
+<p>Balance model complexity and fitting error</p>
+</blockquote>
+<h2 id="parametric-vs-non-parametric-fitting">Parametric vs Non-parametric Fitting</h2>
+<h3 id="parametric-fitting">Parametric Fitting</h3>
+<ul>
+<li>Known model form</li>
+<li>Examples: Line, Circle, Ellipse, Polynomial</li>
+<li>Features:<ul>
+<li>Few parameters</li>
+<li>Efficient</li>
 </ul>
 </li>
-<li>Gaussian Noise<ul>
-<li>Random noise following a Gaussian distribution.</li>
-<li>Commonly reduced using the Gaussian Filter.</li>
 </ul>
-</li>
-<li>Uniform Noise<ul>
-<li>Noise values are uniformly distributed.</li>
-<li>Can be reduced by:<ul>
-<li>Mean Filter</li>
-<li>Gaussian Filter</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Poisson Noise<ul>
-<li>Signal-dependent noise.</li>
-<li>Brighter regions contain stronger noise, while darker regions contain weaker noise.</li>
-<li>Common methods:<ul>
-<li>Gaussian Filter</li>
-<li>Non-Local Means (NLM)</li>
+<h3 id="non-parametric-fitting">Non-parametric Fitting</h3>
+<ul>
+<li>Unknown model form</li>
+<li>Examples: Spline, Kernel Regression</li>
+<li>Features:<ul>
+<li>Flexible</li>
+<li>Expensive</li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-<hr />
-<p><strong>Non-Local Means Filter</strong></p>
-<p>Instead of considering only neighboring pixels, the Non-Local Means filter searches for similar patches across the entire image and averages them according to their similarity.</p>
 
 
 
