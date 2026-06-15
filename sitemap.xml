@@ -2,84 +2,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>None./</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="None"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/"/>
     </url>
     <url>
         <loc>Nonedotnet/</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Nonedotnet/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/dotnet/"/>
     </url>
     <url>
         <loc>Nonevision/</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Nonevision/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/"/>
     </url>
     <url>
         <loc>Nonevision/edge_detection/</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Nonevision/edge_detection/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/edge_detection/"/>
     </url>
     <url>
         <loc>Nonevision/filter/</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Nonevision/filter/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/filter/"/>
     </url>
     <url>
         <loc>Nonevision/fitting/</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Nonevision/fitting/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/fitting/"/>
     </url>
     <url>
         <loc>Nonezh/</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/"/>
         <xhtml:link rel="alternate" hreflang="en" href="None"/>
     </url>
     <url>
         <loc>Nonezh/dotnet/</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/dotnet/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonedotnet/"/>
     </url>
     <url>
         <loc>Nonezh/vision/</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonevision/"/>
     </url>
     <url>
         <loc>Nonezh/vision/edge_detection/</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/edge_detection/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonevision/edge_detection/"/>
     </url>
     <url>
         <loc>Nonezh/vision/filter/</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/filter/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonevision/filter/"/>
     </url>
     <url>
         <loc>Nonezh/vision/fitting/</loc>
-        <lastmod>2026-06-12</lastmod>
+        <lastmod>2026-06-15</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/vision/fitting/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Nonevision/fitting/"/>
