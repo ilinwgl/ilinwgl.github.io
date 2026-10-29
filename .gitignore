@@ -1,0 +1,38 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# MkDocs generated files
+site/
+.cache/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
+*.bak
+*~
+
+# Build artifacts
+dist/
+build/
+*.egg-info/

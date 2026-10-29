@@ -1,0 +1,40 @@
+site_name: Guanlin Wang
+site_url: https://ilinwgl.github.io/
+site_description: Personal Portfolio and Engineering Notes
+site_author: Guanlin Wang
+
+theme:
+  name: material
+  language: en
+
+  palette:
+    scheme: slate
+    primary: custom
+    accent: custom
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - tables
+  - attr_list
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+nav:
+  - Home: index.md
+  - Projects: projects.md
+  - Technical Notes: notes.md
+
+extra_css:
+  - stylesheets/extra.css
